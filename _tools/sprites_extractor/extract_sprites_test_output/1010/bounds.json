@@ -1,0 +1,62 @@
+{
+  "walkS": {
+    "horizontal": -46.7,
+    "vertical": -136.7
+  },
+  "walkR": {
+    "horizontal": -44.8,
+    "vertical": -127.5
+  },
+  "walkL": {
+    "horizontal": -51.5,
+    "vertical": -140.6
+  },
+  "walkF": {
+    "horizontal": -46.7,
+    "vertical": -138.0
+  },
+  "walkB": {
+    "horizontal": -46.8,
+    "vertical": -144.7
+  },
+  "staticS": {
+    "horizontal": -24.3,
+    "vertical": -124.9
+  },
+  "staticR": {
+    "horizontal": -44.6,
+    "vertical": -123.3
+  },
+  "staticL": {
+    "horizontal": -33.1,
+    "vertical": -127.8
+  },
+  "staticF": {
+    "horizontal": -34.9,
+    "vertical": -125.3
+  },
+  "staticB": {
+    "horizontal": -33.6,
+    "vertical": -131.1
+  },
+  "runS": {
+    "horizontal": -67.0,
+    "vertical": -132.1
+  },
+  "runR": {
+    "horizontal": -46.7,
+    "vertical": -130.1
+  },
+  "runL": {
+    "horizontal": -64.7,
+    "vertical": -149.3
+  },
+  "runF": {
+    "horizontal": -55.5,
+    "vertical": -149.5
+  },
+  "runB": {
+    "horizontal": -46.8,
+    "vertical": -145.9
+  }
+}

@@ -1,0 +1,15 @@
+staticS
+staticR
+staticL
+staticF
+staticB
+runS
+runR
+runL
+runF
+runB
+walkS
+walkR
+walkL
+walkF
+walkB

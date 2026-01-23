@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://djhplsxv4og2r"]
+
+[ext_resource type="Script" uid="uid://j1dc5puqtglr" path="res://entities/entity_controller.gd" id="1_wcjeu"]
+[ext_resource type="Script" uid="uid://ewjm3sgcl1tp" path="res://entities/entity_visuals.gd" id="2_7agfi"]
+[ext_resource type="Script" uid="uid://ba3vxecvf64gp" path="res://entities/entity_data.gd" id="3_7sg2j"]
+[ext_resource type="SpriteFrames" uid="uid://djeq8afdnpjs8" path="res://assets/graphics/characters/1010/1010.tres" id="3_366ky"]
+
+[node name="Entity" type="Node2D"]
+script = ExtResource("1_wcjeu")
+
+[node name="EntityVisuals" type="Node2D" parent="."]
+script = ExtResource("2_7agfi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EntityVisuals"]
+sprite_frames = ExtResource("3_366ky")
+animation = &"runB"
+frame = 29
+centered = false
+offset = Vector2(-25.4, -64.5)
+
+[node name="EntityData" type="Node2D" parent="."]
+script = ExtResource("3_7sg2j")

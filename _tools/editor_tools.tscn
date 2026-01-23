@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8cn6820dgrgc"]
+
+[ext_resource type="Script" uid="uid://bampklq3r4p60" path="res://_tools/sprites_extractor/character_sprite_frames_creator.gd" id="1_xxna2"]
+[ext_resource type="Script" uid="uid://ceb5e0cidqdj3" path="res://_tools/map_parser/map_parser.gd" id="2_h6svf"]
+
+[node name="EditorTools" type="Node2D"]
+
+[node name="CharacterSpriteFramesCreator" type="Node" parent="."]
+script = ExtResource("1_xxna2")
+
+[node name="MapParser" type="Node" parent="."]
+script = ExtResource("2_h6svf")

@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+assets/
+tools/sprites_extractor/extract_sprites_test_output
+tools/sprites_extractor/extract_sprites_test_input
+
+# Common image extensions
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.webp
+*.ico

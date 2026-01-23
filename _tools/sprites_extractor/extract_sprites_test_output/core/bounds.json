@@ -1,0 +1,2758 @@
+{
+  "BackgroundHidder": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonNormalDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonNormalUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonToggleDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonToggleUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSimpleRectangleUpDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Button": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Triggers": {
+    "horizontal": 915.9,
+    "vertical": 653.1
+  },
+  "Window": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Label": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ComboBoxButtonNormalIcon": {
+    "horizontal": -8.0,
+    "vertical": -12.0
+  },
+  "ComboBoxNormal": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonComboBoxDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonComboBoxUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ComboBox": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ContainerGrid": {
+    "horizontal": 0.0,
+    "vertical": -16.5
+  },
+  "Rectangle": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Loader": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "DeathCounter": {
+    "horizontal": 22.0,
+    "vertical": 0.0
+  },
+  "ChooseCharacterSprite": {
+    "horizontal": -1.5,
+    "vertical": 0.0
+  },
+  "TextInput": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpawnMobs": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PosPelea": {
+    "horizontal": 772.8,
+    "vertical": 806.9
+  },
+  "List": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ColorPickerColorsCross": {
+    "horizontal": -12.0,
+    "vertical": -12.0
+  },
+  "ColorPickerSliderCross": {
+    "horizontal": -22.0,
+    "vertical": -8.0
+  },
+  "ColorPicker": {
+    "horizontal": -6.0,
+    "vertical": 0.0
+  },
+  "ColorSelector": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PanelNPC": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TextArea": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ProgressBarDefaultRenderer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ProgressBar": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ItemViewer": {
+    "horizontal": 4.0,
+    "vertical": 3.9
+  },
+  "UI_PanelMimibiote": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "CautionIcon": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PanelAdmin": {
+    "horizontal": 2.9,
+    "vertical": 1.0
+  },
+  "IconAirBonus": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconEarthBonus": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconFireBonus": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconWaterBonus": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconVita": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "Star": {
+    "horizontal": -36.8,
+    "vertical": -35.1
+  },
+  "IconMP": {
+    "horizontal": -2.0,
+    "vertical": 0.0
+  },
+  "IconNeutral": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconEarth": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChatArea": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconAir": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconFire": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconWater": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconWisdom": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconInit": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "UI_MobStats": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconPP": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "UI_AgregarDrops": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "FilterIcon9": {
+    "horizontal": 2.7,
+    "vertical": 1.4
+  },
+  "FilterIcon10": {
+    "horizontal": 0.3,
+    "vertical": 1.1
+  },
+  "ItemViewerRarity1": {
+    "horizontal": 0.2,
+    "vertical": 0.4
+  },
+  "ItemViewerRarity5": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "ItemViewerRarity4": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "ItemViewerRarity3": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "ItemViewerRarity2": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "FilterIcon8": {
+    "horizontal": 0.0,
+    "vertical": 1.4
+  },
+  "UI_FlechaDerecha": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_FlechaIzquierda": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "LogrosItem": {
+    "horizontal": 0.0,
+    "vertical": 0.8
+  },
+  "ButtonTransparentUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "DataGrid": {
+    "horizontal": 0.0,
+    "vertical": -0.5
+  },
+  "SpriteViewer": {
+    "horizontal": -15.9,
+    "vertical": 0.0
+  },
+  "UI_Ornamento": {
+    "horizontal": -60.0,
+    "vertical": 0.0
+  },
+  "UI_Titulos": {
+    "horizontal": -60.0,
+    "vertical": 0.0
+  },
+  "UI_CreateTitle": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ChangeCharacter": {
+    "horizontal": 0.0,
+    "vertical": -0.2
+  },
+  "UI_BonusStats": {
+    "horizontal": 516.0,
+    "vertical": 371.0
+  },
+  "ButtonBigStoreUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBigStoreDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonFightPlacesUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonAlbumUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLogroStoreUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonPaseUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonKoloUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMapUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonFightPlacesDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonAlbumDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLogroStoreDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonPaseDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMapDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Clock": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Compass": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ConsoleLogger": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Fps": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "clipForceOver": {
+    "horizontal": -20.0,
+    "vertical": -20.0
+  },
+  "mask": {
+    "horizontal": -1000.0,
+    "vertical": -1000.0
+  },
+  "AlignmentViewerFeatsItem": {
+    "horizontal": 10.0,
+    "vertical": 6.0
+  },
+  "AlignmentViewerOrder": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "AlignmentViewerTree": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "AlignmentViewerTreeItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "pic_IN_MULTI": {
+    "horizontal": -11.9,
+    "vertical": -12.0
+  },
+  "RankViewerPvpActive": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "RankViewerPvpInactive": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "RankViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpecializationViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BookPageIndexChapterItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonArrowCornerDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonArrowCornerUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonArrowDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonArrowUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBannerRoundDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBannerRoundUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBookPageLeftDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBookPageLeftUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBookPageRightDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonBookPageRightUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonChatDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonChatUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCheckDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCheckUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCloseDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCloseUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonColorDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonColorUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCraftDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCraftDownInvert": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCraftUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCraftUpInvert": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCrossDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonCrossUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonDecorationDown": {
+    "horizontal": 0.1,
+    "vertical": 0.0
+  },
+  "ButtonDecorationUp": {
+    "horizontal": 0.1,
+    "vertical": 0.0
+  },
+  "ButtonDownloadDown": {
+    "horizontal": 0.0,
+    "vertical": -1.7
+  },
+  "ButtonDownloadUp": {
+    "horizontal": 0.0,
+    "vertical": -1.7
+  },
+  "ButtonEjectDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonEjectUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Mouth": {
+    "horizontal": -15.0,
+    "vertical": -14.4
+  },
+  "ButtonEmoteDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonEmoteUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonFlatRoundDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonFlatRoundLeft": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonGiveUpDown": {
+    "horizontal": -6.0,
+    "vertical": -6.0
+  },
+  "ButtonGiveUpUp": {
+    "horizontal": -6.0,
+    "vertical": -6.0
+  },
+  "ButtonJoinTaxCollectorDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonJoinTaxCollectorUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLanguageFlagDown": {
+    "horizontal": -3.0,
+    "vertical": -3.0
+  },
+  "ButtonLoginDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLoginMembersDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLoginMembersUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonLoginUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMainMenuDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMainMenuUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonManDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonManUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMaximizeDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMaximizeUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMinimizeDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMinimizeUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMoinsDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMoinsUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteEnvironmentDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteEnvironmentUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteMusicDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteMusicUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteSoundsDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonMuteSoundsUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonNextTurnDown": {
+    "horizontal": -1.0,
+    "vertical": -0.9
+  },
+  "ButtonNextTurnUp": {
+    "horizontal": -1.0,
+    "vertical": -0.9
+  },
+  "ButtonPartyDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonPartyUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonPlusDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonPlusUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonRadioDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonRadioUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSitDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSitUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSpellsDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSpellsUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSquareDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSquareUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSubscribeDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonSubscribeUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonTabDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonTabUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonWomanDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonWomanUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BtnDeleteCharacterDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BtnDeleteCharacterUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Recall": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BtnResetCharacterDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BtnResetCharacterUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseServerListItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "NewCross": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "NewValid": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ClassInfosViewerSpellContainerHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BottomArrow": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Center": {
+    "horizontal": 1.2,
+    "vertical": 2.1
+  },
+  "UI_ChatCautionIcon": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "doubleArrow": {
+    "horizontal": -0.2,
+    "vertical": 0.0
+  },
+  "FilterIcon1": {
+    "horizontal": -0.2,
+    "vertical": -0.2
+  },
+  "FilterIcon2": {
+    "horizontal": 0.0,
+    "vertical": 0.2
+  },
+  "FilterIcon3": {
+    "horizontal": -16.8,
+    "vertical": -15.9
+  },
+  "FilterIcon4": {
+    "horizontal": 1.8,
+    "vertical": 1.8
+  },
+  "FilterIcon5": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "FilterIcon6": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "FilterIcon7": {
+    "horizontal": -2.0,
+    "vertical": 5.0
+  },
+  "Flag": {
+    "horizontal": 10.3,
+    "vertical": 4.5
+  },
+  "Ghost": {
+    "horizontal": 0.0,
+    "vertical": 0.2
+  },
+  "Gold": {
+    "horizontal": -40.8,
+    "vertical": -24.4
+  },
+  "Human": {
+    "horizontal": -22.0,
+    "vertical": -32.0
+  },
+  "IconAirDommage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconEarthDommage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconFireDommage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconNeutralBonus": {
+    "horizontal": -0.5,
+    "vertical": -0.5
+  },
+  "IconNeutralDommage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconRequired": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconRequiredWhite": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "IconWaterDommage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Move": {
+    "horizontal": 1.2,
+    "vertical": 2.1
+  },
+  "Eye": {
+    "horizontal": 2.0,
+    "vertical": 8.0
+  },
+  "NoEye": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "Oeuf": {
+    "horizontal": 2.2,
+    "vertical": -0.2
+  },
+  "OeufCasse": {
+    "horizontal": 2.2,
+    "vertical": 6.6
+  },
+  "OfflineIcon": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "StopSymbol": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Tree": {
+    "horizontal": 0.9,
+    "vertical": 0.6
+  },
+  "TreeDots": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ZoomMinous": {
+    "horizontal": 5.4,
+    "vertical": 2.8
+  },
+  "ZoomPlus": {
+    "horizontal": 5.4,
+    "vertical": 2.8
+  },
+  "ConquestStatsViewerItem": {
+    "horizontal": 4.1,
+    "vertical": 0.0
+  },
+  "FilterIcon0": {
+    "horizontal": -0.2,
+    "vertical": -0.2
+  },
+  "IconForbidden": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Locate": {
+    "horizontal": 0.1,
+    "vertical": 0.0
+  },
+  "ConquestZonesViewerAreaItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ConquestZonesViewerVillageItem": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "CraferListItem": {
+    "horizontal": 14.0,
+    "vertical": 0.0
+  },
+  "CraftResultOverHeadBubble": {
+    "horizontal": -1.1,
+    "vertical": -1.1
+  },
+  "CraftResultOverHeadCross": {
+    "horizontal": 21.0,
+    "vertical": 15.0
+  },
+  "CraftResultOverHeadMiss": {
+    "horizontal": -1.1,
+    "vertical": -1.1
+  },
+  "Container": {
+    "horizontal": 0.0,
+    "vertical": -53.0
+  },
+  "CraftViewerCraftItem": {
+    "horizontal": 0.0,
+    "vertical": -17.2
+  },
+  "_mcDeathCounterHead": {
+    "horizontal": -15.0,
+    "vertical": -12.0
+  },
+  "_mcDeathCounterHeadMore": {
+    "horizontal": -16.0,
+    "vertical": -12.0
+  },
+  "ChallengeKO": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChallengeOK": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "GuildBoostsViewerSpell": {
+    "horizontal": 4.0,
+    "vertical": 4.0
+  },
+  "GuildHousesViewerHouses": {
+    "horizontal": 11.9,
+    "vertical": 7.0
+  },
+  "GuildMembersViewerMember": {
+    "horizontal": 8.0,
+    "vertical": 0.0
+  },
+  "MountParksViewerItem": {
+    "horizontal": 8.0,
+    "vertical": 0.0
+  },
+  "ItemSetViewerItemBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ItemSetViewerItemBorder": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "ItemViewerDestroy": {
+    "horizontal": -0.1,
+    "vertical": 1.0
+  },
+  "ItemViewerTarget": {
+    "horizontal": -1.2,
+    "vertical": -1.2
+  },
+  "ItemViewerTwoHand": {
+    "horizontal": 1.0,
+    "vertical": 0.0
+  },
+  "ItemViewerUseHand": {
+    "horizontal": 0.0,
+    "vertical": -0.2
+  },
+  "ItemViewerItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ItemViewerProgressBar": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "JobViewerSkillItem": {
+    "horizontal": 20.0,
+    "vertical": -13.0
+  },
+  "ListInventoryViewerItem": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "ListInventoryViewerItemNoPrice": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "PreloadSymbol": {
+    "horizontal": -10.4,
+    "vertical": -10.4
+  },
+  "PictoFlagDirection": {
+    "horizontal": -20.6,
+    "vertical": -18.9
+  },
+  "FlagDirection": {
+    "horizontal": -125.4,
+    "vertical": -111.1
+  },
+  "FlagDirectionBig": {
+    "horizontal": -129.0,
+    "vertical": -118.2
+  },
+  "FlagDirectionSmall": {
+    "horizontal": 36.4,
+    "vertical": -19.2
+  },
+  "ProgressBarSemiCornerRenderer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "PointsViewerAP": {
+    "horizontal": -34.0,
+    "vertical": -38.5
+  },
+  "PointsViewerMP": {
+    "horizontal": -37.9,
+    "vertical": -39.9
+  },
+  "QuestionViewerAnswerItem": {
+    "horizontal": 14.0,
+    "vertical": 0.0
+  },
+  "SmileyContainerHighlight": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "SmileysHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellFullInfosViewerFalse": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellFullInfosViewerTrue": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellFullInfosViewerItem": {
+    "horizontal": 4.0,
+    "vertical": -13.0
+  },
+  "SpellsItem": {
+    "horizontal": 6.0,
+    "vertical": -2.0
+  },
+  "StatsViewerStatItem": {
+    "horizontal": -68.1,
+    "vertical": 0.0
+  },
+  "VerticalChrono": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TaxCollectorsViewerItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TaxCollectorViewerPlayer": {
+    "horizontal": -16.0,
+    "vertical": -10.0
+  },
+  "MaskRect": {
+    "horizontal": 4.0,
+    "vertical": 4.0
+  },
+  "TimelineItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TimelineItemSummonedBg": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TimelinePointer": {
+    "horizontal": -4.0,
+    "vertical": -29.3
+  },
+  "UI_AskAlertServerContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskCancelContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskChooseNickNameContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskCustomShortcutContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskMainMenuContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskOkContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskPayZoneInfosContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskPrivateChatContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskSecretAnswerContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskYesNoContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskYesNoIgnoreContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ChooseNickName": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BannerBookIcon": {
+    "horizontal": -32.0,
+    "vertical": -33.6
+  },
+  "UI_BannerChatCommandAll": {
+    "horizontal": -3.0,
+    "vertical": -2.7
+  },
+  "UI_BannerClockArrowHours": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerClockArrowMinutes": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerClockBack": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerCompassArrow": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerCompassBack": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerCompassNoArrow": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "UI_BannerContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BannerContainerBorder": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BannerContainerHighLight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BannerFriendsIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerGuildIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerInventoryIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerMapIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerMountIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerPvpIcon": {
+    "horizontal": -32.0,
+    "vertical": -34.0
+  },
+  "UI_BannerSpellIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.0
+  },
+  "UI_BannerStatsIcon": {
+    "horizontal": -32.0,
+    "vertical": -32.4
+  },
+  "UI_BigStoreCategories": {
+    "horizontal": -17.6,
+    "vertical": -14.3
+  },
+  "UI_BigStorePriceItemNoBuy": {
+    "horizontal": 0.2,
+    "vertical": -0.1
+  },
+  "UI_BigStorePriceItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BuffHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CardsCollectionContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CardsCollectionContainerHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CharactersMigrationItem": {
+    "horizontal": 8.0,
+    "vertical": 3.0
+  },
+  "ChooseCharacterBtnPlayDown": {
+    "horizontal": -2.0,
+    "vertical": 0.0
+  },
+  "ChooseCharacterBtnPlayUp": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "ChooseCharacterServerState0": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseCharacterServerState1": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseCharacterServerState2": {
+    "horizontal": -0.7,
+    "vertical": 0.0
+  },
+  "CreateCharacterSymbolHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseItemSkinItem": {
+    "horizontal": 20.0,
+    "vertical": 4.0
+  },
+  "BtnChooseServerDown": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "UI_MainMenuEdit": {
+    "horizontal": -3.8,
+    "vertical": -4.5
+  },
+  "BtnChooseServerUp": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "BtnSubscribe": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "DirectionChooserArrowB": {
+    "horizontal": 18.1,
+    "vertical": -5.9
+  },
+  "DirectionChooserArrowBL": {
+    "horizontal": 39.4,
+    "vertical": 2.2
+  },
+  "DirectionChooserArrowBR": {
+    "horizontal": 4.4,
+    "vertical": 2.0
+  },
+  "DirectionChooserArrowL": {
+    "horizontal": 37.7,
+    "vertical": 9.1
+  },
+  "DirectionChooserArrowR": {
+    "horizontal": -11.8,
+    "vertical": 8.7
+  },
+  "DirectionChooserArrowT": {
+    "horizontal": 17.4,
+    "vertical": 18.9
+  },
+  "DirectionChooserArrowTL": {
+    "horizontal": 39.0,
+    "vertical": 19.8
+  },
+  "DirectionChooserArrowTR": {
+    "horizontal": 3.9,
+    "vertical": 19.5
+  },
+  "UI_ExchangeGridBackground": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_ExchangeGridHighlight": {
+    "horizontal": 0.1,
+    "vertical": 0.0
+  },
+  "UI_FightOptionBlockJoinerDown": {
+    "horizontal": 5.5,
+    "vertical": 1.5
+  },
+  "UI_FightOptionBlockJoinerExceptPartyMemberDown": {
+    "horizontal": 0.0,
+    "vertical": 5.4
+  },
+  "UI_FightOptionBlockJoinerExceptPartyMemberUp": {
+    "horizontal": 0.0,
+    "vertical": 5.4
+  },
+  "UI_FightOptionBlockJoinerUp": {
+    "horizontal": 5.5,
+    "vertical": 1.5
+  },
+  "UI_FightOptionBlockSpectatorDown": {
+    "horizontal": 0.6,
+    "vertical": 2.0
+  },
+  "UI_FightOptionBlockSpectatorUp": {
+    "horizontal": 0.6,
+    "vertical": 2.0
+  },
+  "UI_FightOptionButtonCell": {
+    "horizontal": -16.9,
+    "vertical": -23.6
+  },
+  "UI_FightOptionNeedHelpDown": {
+    "horizontal": -2.9,
+    "vertical": -26.1
+  },
+  "UI_FightOptionNeedHelpDown_DoubleFramerate": {
+    "horizontal": -2.9,
+    "vertical": -26.1
+  },
+  "UI_FightOptionNeedHelpUp": {
+    "horizontal": -2.9,
+    "vertical": -26.1
+  },
+  "UI_FightOptionNeedHelpUp_DoubleFramerate": {
+    "horizontal": -2.9,
+    "vertical": -26.1
+  },
+  "UI_FightOptionTacticModeDown": {
+    "horizontal": -9.6,
+    "vertical": -7.2
+  },
+  "UI_FightOptionTacticModeUp": {
+    "horizontal": -9.6,
+    "vertical": -7.2
+  },
+  "UI_FightOptionToggleSpritesDown": {
+    "horizontal": -6.0,
+    "vertical": 9.1
+  },
+  "UI_FightOptionToggleSpritesUp": {
+    "horizontal": -6.0,
+    "vertical": 10.0
+  },
+  "UI_FightsInfosFightItem": {
+    "horizontal": 10.0,
+    "vertical": 0.0
+  },
+  "UI_FightsInfosPlayerItem": {
+    "horizontal": 10.0,
+    "vertical": 0.0
+  },
+  "UI_ForgemagusContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ForgemagusContainerHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Eye2": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_FriendsConnectedItem": {
+    "horizontal": 8.0,
+    "vertical": 0.0
+  },
+  "UI_FriendsDisconnectedItem": {
+    "horizontal": 8.0,
+    "vertical": 0.0
+  },
+  "UI_GameResultSeparator": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_GameResultPlayer": {
+    "horizontal": 6.0,
+    "vertical": 0.0
+  },
+  "UI_GameResultPlayerPVP": {
+    "horizontal": 6.0,
+    "vertical": 0.0
+  },
+  "UI_GameResultTeam": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_GameResultTeamPVP": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseCharacterSpriteSelect": {
+    "horizontal": -77.0,
+    "vertical": -77.0
+  },
+  "UI_GiftsSprite": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_IndicatorArrow": {
+    "horizontal": -36.9,
+    "vertical": -274.7
+  },
+  "UI_IndicatorArrow_DoubleFramerate": {
+    "horizontal": -36.9,
+    "vertical": -274.7
+  },
+  "UI_IndicatorLight": {
+    "horizontal": -38.1,
+    "vertical": -39.7
+  },
+  "UI_InventoryMountIcon": {
+    "horizontal": -18.9,
+    "vertical": -31.7
+  },
+  "UI_InventoryContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_InventoryContainerHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_InventoryContainerHighlight_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_InventoryGridBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_InventoryGridHighlight": {
+    "horizontal": 0.1,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol0": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol1": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol2": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol3": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol4": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol5": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol6": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol7": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol8": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbol9": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeContainer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbolContainer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCodeSymbolHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KnownledgeBaseCategory": {
+    "horizontal": -25.5,
+    "vertical": -15.9
+  },
+  "UI_KnownledgeBaseItem": {
+    "horizontal": -10.9,
+    "vertical": 0.8
+  },
+  "UI_Login_flagsMask": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "News_Contest_de": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Contest_en": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Contest_es": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Contest_fr": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Dedicaces": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Event": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Maintenance": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_News": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Reboot": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Shop": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Sondage_de": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Sondage_en": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Sondage_es": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Sondage_fr": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Update_de": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Update_en": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Update_es": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "News_Update_fr": {
+    "horizontal": -2.0,
+    "vertical": -2.0
+  },
+  "UI_LoginNewsItem": {
+    "horizontal": 0.0,
+    "vertical": 6.0
+  },
+  "LookSelectorBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "LookSelectorHighlight": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_MainMenuBugs": {
+    "horizontal": -0.8,
+    "vertical": -1.6
+  },
+  "UI_MainMenuCross": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Help": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MainMenuHelp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MainMenuOptions": {
+    "horizontal": 0.0,
+    "vertical": 0.1
+  },
+  "StarSymbol": {
+    "horizontal": -3.3,
+    "vertical": -5.4
+  },
+  "UI_MainMenuSubscribe": {
+    "horizontal": -1.3,
+    "vertical": -2.2
+  },
+  "UI_MapExplorerFlag": {
+    "horizontal": -2.0,
+    "vertical": -101.5
+  },
+  "UI_MapExplorerRectangle": {
+    "horizontal": -38.4,
+    "vertical": -22.0
+  },
+  "UI_MapExplorerSelectRectangle": {
+    "horizontal": -40.0,
+    "vertical": -23.0
+  },
+  "MountStorageMountItem": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "VolumeSliderMarkerDefault": {
+    "horizontal": 0.0,
+    "vertical": -20.0
+  },
+  "VolumeSlider": {
+    "horizontal": 0.0,
+    "vertical": -4.0
+  },
+  "OptionsDisplayContent": {
+    "horizontal": 14.0,
+    "vertical": 2.0
+  },
+  "OptionsGeneralContent": {
+    "horizontal": 12.0,
+    "vertical": 8.0
+  },
+  "OptionsSoundContent": {
+    "horizontal": 20.0,
+    "vertical": 20.0
+  },
+  "UI_PayZoneIcon": {
+    "horizontal": -35.0,
+    "vertical": -33.0
+  },
+  "UI_PayZoneIcon_DoubleFramerate": {
+    "horizontal": -35.0,
+    "vertical": -33.0
+  },
+  "UI_PlayerInfosEffectsItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PopupQuantityOk": {
+    "horizontal": 11.3,
+    "vertical": 9.0
+  },
+  "UI_PopupHexaContent": {
+    "horizontal": 0.0,
+    "vertical": -0.1
+  },
+  "UI_PopupQuatityContent": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "KamaSymbol": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_QuestKamaSymbol": {
+    "horizontal": 7.4,
+    "vertical": 5.7
+  },
+  "UI_QuestsBubble": {
+    "horizontal": -12.4,
+    "vertical": -11.4
+  },
+  "UI_WaypointItemLocate": {
+    "horizontal": 2.1,
+    "vertical": 2.0
+  },
+  "UI_QuestsObjectivetItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_QuestsQuestItem": {
+    "horizontal": 15.3,
+    "vertical": 0.0
+  },
+  "UI_QuestsStepItem": {
+    "horizontal": 5.3,
+    "vertical": 0.0
+  },
+  "UI_QuestsStepRewardItem": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "UI_SecureCraftGridBackground": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_SecureCraftGridHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ShortcutsItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellForgetItem": {
+    "horizontal": 12.1,
+    "vertical": 0.0
+  },
+  "UI_SpellsBoostContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellsBoostContainerBorder": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellsBoostContainerHighLight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellsContainerBackground": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_SpellsContainerBorder": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_SpellsContainerHighLight": {
+    "horizontal": 2.0,
+    "vertical": 2.0
+  },
+  "UI_StatsJobContainerBackground": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_StatsJobContainerBackground2": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_StatsJobContainerHighlight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SubwayItem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonTimelineDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonTimelineUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_WaypointsItem": {
+    "horizontal": -4.0,
+    "vertical": 0.0
+  },
+  "UI_AskAlertServer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskCancel": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskChooseNickName": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskCustomShortcut": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskGameBegin": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskGameBegin_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskLinkWarning": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskMainMenu": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskOk": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskOkWait": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskPrivateChat": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskReportMessage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskSecretAnswer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskYesNo": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AskYesNoIgnore": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_AutomaticServer": {
+    "horizontal": -345.8,
+    "vertical": -149.1
+  },
+  "UI_AutomaticServer_DoubleFramerate": {
+    "horizontal": -345.8,
+    "vertical": -149.1
+  },
+  "StylizedRectangle": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Smileys": {
+    "horizontal": 0.0,
+    "vertical": -1.9
+  },
+  "Chat": {
+    "horizontal": -116.0,
+    "vertical": -135.9
+  },
+  "MouseShortcuts": {
+    "horizontal": -62.5,
+    "vertical": -17.2
+  },
+  "CircleChronoHalfDefault": {
+    "horizontal": -100.0,
+    "vertical": -100.0
+  },
+  "CircleChrono": {
+    "horizontal": -72.0,
+    "vertical": -80.0
+  },
+  "ActionPointsViewer": {
+    "horizontal": -20.5,
+    "vertical": -22.4
+  },
+  "Heart": {
+    "horizontal": -88.5,
+    "vertical": -38.3
+  },
+  "UI_Banner": {
+    "horizontal": -116.3,
+    "vertical": 728.4
+  },
+  "PlayerWeight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BigStoreBuy": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BigStoreBuy_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BigStoreSearch": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BigStoreSearchFullSoul": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ListInventoryViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_BigStoreSell": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Buff": {
+    "horizontal": 544.0,
+    "vertical": -21.2
+  },
+  "BuffViewer": {
+    "horizontal": 4.0,
+    "vertical": 8.0
+  },
+  "UI_BuffInfos": {
+    "horizontal": 440.0,
+    "vertical": 280.0
+  },
+  "Coeur": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CardsCollection": {
+    "horizontal": -6.0,
+    "vertical": 0.0
+  },
+  "UI_CenterInfo": {
+    "horizontal": 0.0,
+    "vertical": 372.0
+  },
+  "UI_CenterText": {
+    "horizontal": -2.0,
+    "vertical": 372.0
+  },
+  "UI_ChallengeMenu": {
+    "horizontal": 1089.9,
+    "vertical": 783.4
+  },
+  "UI_CharactersMigration": {
+    "horizontal": -44.7,
+    "vertical": -0.2
+  },
+  "UI_ChooseCharacter": {
+    "horizontal": -44.7,
+    "vertical": -0.2
+  },
+  "UI_ChooseFeed": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseItemSkin": {
+    "horizontal": 0.0,
+    "vertical": -20.5
+  },
+  "UI_ChooseItemSkin": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Bonhomme": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ChooseServerSprite": {
+    "horizontal": -8.0,
+    "vertical": -8.0
+  },
+  "UI_ChooseServer": {
+    "horizontal": 0.0,
+    "vertical": -0.2
+  },
+  "UI_Cinematic": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Conquest": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Craft": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CrafterCard": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CrafterList": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CreateCharacter": {
+    "horizontal": 0.0,
+    "vertical": -0.2
+  },
+  "Emblem": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_CreateGuild": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Debug": {
+    "horizontal": 40.0,
+    "vertical": 40.0
+  },
+  "DirectionChooserShadow": {
+    "horizontal": -21.3,
+    "vertical": -1.0
+  },
+  "DirectionChooserArrows": {
+    "horizontal": -125.0,
+    "vertical": -66.0
+  },
+  "UI_DirectionChooser": {
+    "horizontal": 0.0,
+    "vertical": -224.0
+  },
+  "UI_DocumentBook": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_DocumentParchment": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_DocumentRoadSignLeft": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_DocumentRoadSignRight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Dragger": {
+    "horizontal": -10.0,
+    "vertical": -10.0
+  },
+  "OgrineSymbol": {
+    "horizontal": 0.1,
+    "vertical": -0.1
+  },
+  "UI_Exchange": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_FightChallenge": {
+    "horizontal": 19.0,
+    "vertical": 98.0
+  },
+  "UI_FightOptionButtons": {
+    "horizontal": 1284.0,
+    "vertical": 740.0
+  },
+  "UI_FightsInfos": {
+    "horizontal": 440.0,
+    "vertical": 100.0
+  },
+  "UI_FloatingTips": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ItemViewerLite": {
+    "horizontal": 4.0,
+    "vertical": 3.9
+  },
+  "UI_ForgemagusCraft": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Friends": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_GameOver": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "StarBorder": {
+    "horizontal": -10.0,
+    "vertical": -9.9
+  },
+  "StarsDisplayer": {
+    "horizontal": -2.1,
+    "vertical": -2.0
+  },
+  "UI_GameResult": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Gifts": {
+    "horizontal": -44.7,
+    "vertical": -0.2
+  },
+  "UI_Guild": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_GuildHouseRights": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_GuildMemberInfos": {
+    "horizontal": -570.0,
+    "vertical": 0.0
+  },
+  "UI_HistoryViewerOnCreate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_HouseIndoor": {
+    "horizontal": 11.1,
+    "vertical": -22.1
+  },
+  "UI_HouseSale": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "LivingItemsViewer": {
+    "horizontal": 0.0,
+    "vertical": -75.7
+  },
+  "UI_Inventory": {
+    "horizontal": 0.0,
+    "vertical": -457.9
+  },
+  "UI_Inventory_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": -457.9
+  },
+  "UI_InventorySearch": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ItemFound": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ItemSelector": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ItemSummoner": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Contenido": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ItemUtility": {
+    "horizontal": 406.0,
+    "vertical": 72.0
+  },
+  "UI_ItemViewer": {
+    "horizontal": 432.0,
+    "vertical": 232.0
+  },
+  "UI_JoinFriend": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_JoinFriend_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KeyCode": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KnownledgeBase": {
+    "horizontal": 6.0,
+    "vertical": 115.8
+  },
+  "UI_LoginAdvencedBack": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_LoginAlertIcon": {
+    "horizontal": -2.0,
+    "vertical": -1.9
+  },
+  "UI_Login": {
+    "horizontal": 0.0,
+    "vertical": -131.2
+  },
+  "UI_Login_DoubleFramerate": {
+    "horizontal": 0.0,
+    "vertical": -131.2
+  },
+  "UI_MainMenu": {
+    "horizontal": 1332.4,
+    "vertical": -6.0
+  },
+  "GridInventoryViewer": {
+    "horizontal": 0.0,
+    "vertical": 2.0
+  },
+  "UI_MakeMimibiote": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MakeReport": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "MapNavigatorMoveCursor": {
+    "horizontal": -34.0,
+    "vertical": -34.1
+  },
+  "MapNavigator": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MapExplorer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MapInfos": {
+    "horizontal": 20.0,
+    "vertical": 20.0
+  },
+  "UI_MonsterAndLookSelector": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "MountViewer": {
+    "horizontal": 6.0,
+    "vertical": 8.0
+  },
+  "UI_Mount": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "HelpWithBack": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MountAncestorsViewer": {
+    "horizontal": -40.0,
+    "vertical": -60.0
+  },
+  "UI_MountParkSale": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Inventory": {
+    "horizontal": -32.0,
+    "vertical": -33.0
+  },
+  "UI_MountStorage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_MountViewer": {
+    "horizontal": 4.0,
+    "vertical": 0.0
+  },
+  "UI_MovableContainerBar": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_NpcDialog": {
+    "horizontal": -40.0,
+    "vertical": 0.0
+  },
+  "UI_NpcShop": {
+    "horizontal": -40.0,
+    "vertical": 0.0
+  },
+  "ScrollBarDownArrow": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ScrollBarTrack": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ScrollBarThumb": {
+    "horizontal": 2.0,
+    "vertical": 0.0
+  },
+  "ScrollBarUpArrow": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ScrollBar": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Options": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PartyItem": {
+    "horizontal": 0.0,
+    "vertical": -14.8
+  },
+  "UI_PartyItemInfo": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Party": {
+    "horizontal": 1426.0,
+    "vertical": 82.0
+  },
+  "UI_PayZone": {
+    "horizontal": 60.0,
+    "vertical": 100.0
+  },
+  "UI_PayZoneDialog": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PayZoneDialog2": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PlayerInfos": {
+    "horizontal": 832.0,
+    "vertical": 404.0
+  },
+  "UI_PlayerShop": {
+    "horizontal": -40.0,
+    "vertical": 0.0
+  },
+  "ItemViewerEffects": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ChooseReward": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PlayerShopModifier": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PopupHexa": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_PopupQuantity": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Quests": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Register": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SecureCraft": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ServerInformations": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ServerList": {
+    "horizontal": 96.0,
+    "vertical": 365.8
+  },
+  "UI_ServersManagerRetry": {
+    "horizontal": 20.0,
+    "vertical": 20.0
+  },
+  "UI_Shortcuts": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellForget": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellFullInfosViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_SpellInfos": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellBoostViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpellInfosViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Spells": {
+    "horizontal": 0.0,
+    "vertical": -9.7
+  },
+  "UI_SpellViewerOnCreate": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_StatsJob": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "MountWeight": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Storage": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_StringCourse": {
+    "horizontal": -240.0,
+    "vertical": -50.0
+  },
+  "UI_StringCourse_DoubleFramerate": {
+    "horizontal": -240.0,
+    "vertical": -50.0
+  },
+  "UI_Subway": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_TaxCollectorStorage": {
+    "horizontal": -40.0,
+    "vertical": 0.0
+  },
+  "Timeline": {
+    "horizontal": -30.0,
+    "vertical": 0.0
+  },
+  "UI_Timeline": {
+    "horizontal": 1450.0,
+    "vertical": 776.0
+  },
+  "UI_Tips": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_TitleDisplayer": {
+    "horizontal": 146.1,
+    "vertical": 273.6
+  },
+  "UI_Tutorial": {
+    "horizontal": 20.0,
+    "vertical": 20.0
+  },
+  "UI_Waiting": {
+    "horizontal": 1455.4,
+    "vertical": 50.3
+  },
+  "UI_Waiting_DoubleFramerate": {
+    "horizontal": 1455.4,
+    "vertical": 50.3
+  },
+  "UI_WaitingMessage": {
+    "horizontal": -2.0,
+    "vertical": 0.0
+  },
+  "UI_WaitingQueue": {
+    "horizontal": -2.0,
+    "vertical": 0.0
+  },
+  "UI_Waypoints": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Zoom": {
+    "horizontal": 638.2,
+    "vertical": -6.4
+  },
+  "CraftViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "AlignmentViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ArtworkRotationItem": {
+    "horizontal": -328.0,
+    "vertical": -532.0
+  },
+  "ArtworkRotation": {
+    "horizontal": -368.0,
+    "vertical": -572.0
+  },
+  "BannerSpriteInfos": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BookPageIndex": {
+    "horizontal": 0.0,
+    "vertical": 20.0
+  },
+  "BookPageText": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "BookPageTitle": {
+    "horizontal": 0.0,
+    "vertical": 220.0
+  },
+  "Card": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ClassCustomize": {
+    "horizontal": -18.0,
+    "vertical": 0.0
+  },
+  "ClassInfosViewer": {
+    "horizontal": -1.0,
+    "vertical": 0.0
+  },
+  "ConquestJoinViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ConquestStatsViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ConquestZonesViewer": {
+    "horizontal": 0.0,
+    "vertical": -44.0
+  },
+  "FightChallengeIcon": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Loupe": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "FightChallengeViewer": {
+    "horizontal": 100.0,
+    "vertical": 242.0
+  },
+  "GuildBoostsViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "GuildHousesViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "GuildMembersViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "GuildMountParkViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "Helper": {
+    "horizontal": -189.3,
+    "vertical": -380.2
+  },
+  "Helper_DoubleFramerate": {
+    "horizontal": -189.3,
+    "vertical": -380.2
+  },
+  "ItemSetViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "JobOptionsViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "JobViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "MiniMap": {
+    "horizontal": -12.0,
+    "vertical": -3.4
+  },
+  "QuestionViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "QuestStepListViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "QuestStepViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "SpouseViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "StatsViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "TaxCollectorsViewer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ColorUno": {
+    "horizontal": 16.2,
+    "vertical": 15.1
+  },
+  "UI_EditPlayer": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "OrnamentoItem": {
+    "horizontal": 0.0,
+    "vertical": -5.1
+  },
+  "TitulosItem": {
+    "horizontal": 0.0,
+    "vertical": -5.1
+  },
+  "UI_LootBox": {
+    "horizontal": -446.7,
+    "vertical": -31.0
+  },
+  "ButtonTransfertToBankDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "ButtonTransfertToBankUp": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_Edit": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_KoliseoItem": {
+    "horizontal": -0.7,
+    "vertical": -0.2
+  },
+  "UI_Koliseo": {
+    "horizontal": 1278.6,
+    "vertical": 121.3
+  },
+  "UI_Koliseum": {
+    "horizontal": -500.0,
+    "vertical": 0.0
+  },
+  "UI_QuestXP": {
+    "horizontal": 0.0,
+    "vertical": 9.0
+  },
+  "UI_LogroDetalle": {
+    "horizontal": 452.6,
+    "vertical": 139.1
+  },
+  "UI_Logros": {
+    "horizontal": 0.0,
+    "vertical": -72.7
+  },
+  "UI_Prestigio": {
+    "horizontal": -500.0,
+    "vertical": 1.9
+  },
+  "OgrinaSymbol": {
+    "horizontal": -1.9,
+    "vertical": -2.1
+  },
+  "UI_Servicios": {
+    "horizontal": 386.0,
+    "vertical": 100.0
+  },
+  "UI_Zones": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  },
+  "UI_ZonesItem": {
+    "horizontal": 1.0,
+    "vertical": 6.0
+  },
+  "ButtonKoloDown": {
+    "horizontal": 0.0,
+    "vertical": 0.0
+  }
+}

@@ -1,0 +1,6 @@
+2026-01-18 18:24:38 | 1011.swf | walkR | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1011\\frames\\walkR\\DefineSprite_12\\22.png'
+2026-01-18 18:24:53 | 1011.swf | appearR | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1011\\frames\\appearR\\DefineSprite_68\\7.png'
+2026-01-18 18:24:56 | 1011.swf | anim2R | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1011\\frames\\anim2R\\DefineSprite_81\\40.png'
+2026-01-18 18:24:58 | 1011.swf | anim2L | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1011\\frames\\anim2L\\DefineSprite_86\\26.png'
+2026-01-18 18:25:04 | 1011.swf | anim0L | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1011\\frames\\anim0L\\DefineSprite_86\\7.png'
+2026-01-18 18:28:19 | 1010.swf | walkS | [WinError 32] The process cannot access the file because it is being used by another process: 'extract_sprites_test_output\\1010\\frames\\walkS\\DefineSprite_33\\18.png'
