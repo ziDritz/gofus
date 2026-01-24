@@ -14,10 +14,10 @@ const CELL_HEIGHT := 27  # Half-height for isometric
 const CELL_HALF_HEIGHT := 13.5  # Half-height for isometric
 const LEVEL_HEIGHT := 20  # Vertical offset per elevation level
 
-const CSV_PATH := "res://maps/data/maps_data.csv"
-const GROUND_TILES_PATH := "res://maps/graphics/grounds/"
-const OBJECT_SPRITES_PATH := "res://maps/graphics/objects/"
-const BACKGROUNDS_PATH := "res://maps/graphics/backgrounds/"
+const CSV_PATH := "res://database/maps_data.csv"
+const GROUND_TILES_PATH := "res://assets/graphics/gfx/grounds/"
+const OBJECT_SPRITES_PATH := "res://assets/graphics/gfx/objects/"
+const BACKGROUNDS_PATH := "res://assets/graphics/gfx/backgrounds/"
 
 
 # =========================
@@ -147,7 +147,7 @@ func load_map(map_id: int) -> Node2D:
 	print("[MapManager] Parsed %d cells" % cells.size())
 	
 	# Create Map scene
-	var map_scene : PackedScene = preload("res://maps/Map.tscn")
+	var map_scene : PackedScene = preload("res://graphics/battlefield/Map.tscn")
 	var map : Node2D = map_scene.instantiate()
 	
 	print("[MapManager] Map scene instantiated")

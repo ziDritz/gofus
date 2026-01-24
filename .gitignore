@@ -2,11 +2,5 @@
 .godot/
 /android/
 assets/
-tools/sprites_extractor/extract_sprites_test_output
-tools/sprites_extractor/extract_sprites_test_input
-
-# Common image extensions
-*.png
-*.swf
-*.import
-*.uid
+_tools/sprites_extractor/extract_sprites_test_output
+_tools/sprites_extractor/extract_sprites_test_input
