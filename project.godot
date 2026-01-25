@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Gofus"
+run/main_scene="uid://3buy7sley8ft"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GofusCore="*res://gofus_core.gd"
+Datacenter="*res://datacenter/datacenter.gd"
 MapManager="*res://managers/map_manager.gd"
 MapParser="*res://_tools/map_parser/map_parser.gd"
 
