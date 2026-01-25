@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqqkxh6y6xofa"]
+[gd_scene load_steps=2 format=3 uid="uid://88hsfyn7ne2k"]
 
-[ext_resource type="SpriteFrames" uid="uid://djeq8afdnpjs8" path="res://assets/graphics/characters/1010/1010.tres" id="3_366ky"]
+[ext_resource type="SpriteFrames" uid="uid://djeq8afdnpjs8" path="res://assets/graphics/characters/1010/1010.tres" id="1_bmbd8"]
 
 [node name="Entity" type="Node2D"]
 
 [node name="EntityVisuals" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EntityVisuals"]
-sprite_frames = ExtResource("3_366ky")
+sprite_frames = ExtResource("1_bmbd8")
 animation = &"runB"
 frame = 29
 centered = false

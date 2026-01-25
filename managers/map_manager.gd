@@ -1,4 +1,4 @@
-# MapManager.gd (equivalent of MapHandler.as)
+# MapManager.gd (equivalent of ServerMapManager.as)
 # AutoLoad singleton managing map loading, caching, and instantiation
 # Orchestrates map building, layer rendering, cell updates, and tactic mode
 

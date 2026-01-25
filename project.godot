@@ -16,9 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameStateManager="*res://scripts/core/game_state_manager.gd"
-EntityManager="*res://entities/entity_manager.gd"
-MapManager="*res://maps/map_manager.gd"
+GofusCore="*res://gofus_core.gd"
+MapManager="*res://managers/map_manager.gd"
 MapParser="*res://_tools/map_parser/map_parser.gd"
 
 [debug]
