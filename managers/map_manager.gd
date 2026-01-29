@@ -8,16 +8,16 @@ extends Node
 # CONSTANTS
 # =========================
 
-const CELL_WIDTH := 53
-const CELL_HALF_WIDTH := 26.5
-const CELL_HEIGHT := 27  # Half-height for isometric
-const CELL_HALF_HEIGHT := 13.5  # Half-height for isometric
-const LEVEL_HEIGHT := 20  # Vertical offset per elevation level
+const CELL_WIDTH : int = 53
+const CELL_HALF_WIDTH : float = 26.5
+const CELL_HEIGHT : int = 27  # Half-height for isometric
+const CELL_HALF_HEIGHT : float = 13.5  # Half-height for isometric
+const LEVEL_HEIGHT : int = 20  # Vertical offset per elevation level
 
-const CSV_PATH := "res://database/maps_data.csv"
-const GROUND_TILES_PATH := "res://assets/graphics/gfx/grounds/"
-const OBJECT_SPRITES_PATH := "res://assets/graphics/gfx/objects/"
-const BACKGROUNDS_PATH := "res://assets/graphics/gfx/backgrounds/"
+const CSV_PATH : String = "res://database/maps_data.csv"
+const GROUND_TILES_PATH : String = "res://assets/graphics/gfx/grounds/"
+const OBJECT_SPRITES_PATH : String = "res://assets/graphics/gfx/objects/"
+const BACKGROUNDS_PATH : String = "res://assets/graphics/gfx/backgrounds/"
 
 
 # =========================
