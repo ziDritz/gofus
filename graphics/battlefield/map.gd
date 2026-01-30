@@ -330,8 +330,9 @@ func get_cell(cell_num: int) -> Cell:
 
 ## Get cell at coordinates
 func get_cell_at_coords(x: int, y: int) -> Cell:
-	var cell_num := MapManager.get_cell_number(x, y, map_width)
-	return get_cell(cell_num)
+	# var cell_num := MapManager.get_cell_number(x, y, map_width)
+	# return get_cell(cell_num)
+	return
 
 
 ## Get all walkable cells

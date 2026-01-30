@@ -1,4 +1,4 @@
 extends Node
 
 
-var map: DofusMap
+var current_map_resource: MapResource

@@ -1,4 +1,4 @@
-class_name Battlefield
+# Battlefield = DofusBattlefier = api.gfx
 extends Node
 
 
@@ -10,3 +10,5 @@ func _ready() -> void:
 	add_child(map_handler)
 
 
+func build_map(map_resource: MapResource):
+	pass

@@ -1,11 +1,35 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
+const maps_db_path: String = "res://database/maps_db.csv"
+var maps_data : Dictionary = {}  # id -> row Dictionary
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	load_csv(maps_db_path)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func load_csv(path: String) -> void:
+	var file : FileAccess = FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		push_error("CSV not found: " + path)
+		return
+
+	var headers : PackedStringArray = file.get_csv_line()
+	var id_index : int = headers.find("id")
+
+	while not file.eof_reached():
+		var row : PackedStringArray = file.get_csv_line()
+		if row.is_empty() or row.size() == 1:
+			continue
+
+		var entry : Dictionary = {}
+
+		for i in headers.size():
+			entry[headers[i]] = row[i]
+
+		maps_data[row[id_index]] = entry
+
+
+func get_map_by_id(id: String) -> Dictionary:
+	return maps_data.get(id)
