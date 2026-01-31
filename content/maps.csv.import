@@ -1,17 +1,3 @@
 [remap]
 
-importer="csv_translation"
-type="Translation"
-uid="uid://c47xwoup2mb81"
-
-[deps]
-
-files=["res://content/maps.width.translation", "res://content/maps.height.translation", "res://content/maps.backgroundNum.translation", "res://content/maps.ambianceId.translation", "res://content/maps.musicId.translation", "res://content/maps.bOutdoor.translation", "res://content/maps.capabilities.translation", "res://content/maps.mapData.translation", "res://content/maps.canAggro.translation", "res://content/maps.canUseInventory.translation", "res://content/maps.canUseObject.translation", "res://content/maps.canChangeCharac.translation"]
-
-source_file="res://content/maps.csv"
-dest_files=["res://content/maps.width.translation", "res://content/maps.height.translation", "res://content/maps.backgroundNum.translation", "res://content/maps.ambianceId.translation", "res://content/maps.musicId.translation", "res://content/maps.bOutdoor.translation", "res://content/maps.capabilities.translation", "res://content/maps.mapData.translation", "res://content/maps.canAggro.translation", "res://content/maps.canUseInventory.translation", "res://content/maps.canUseObject.translation", "res://content/maps.canChangeCharac.translation"]
-
-[params]
-
-compress=true
-delimiter=0
+importer="keep"
