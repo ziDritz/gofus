@@ -17,10 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GofusCore="*res://gofus_core.gd"
+Battlefield="*res://graphics/battlefield/battlefield.gd"
+Database="*res://database/database.gd"
 Datacenter="*res://datacenter/datacenter.gd"
 MapManager="*res://managers/map_manager.gd"
-MapParser="*res://_tools/map_parser/map_parser.gd"
+MapParser="res://_tools/map_parser/map_parser.gd"
+Compressor="*res://utils/compressor.gd"
 
 [debug]
 

@@ -78,6 +78,7 @@ func load_map(map_id: int) -> void:
 	
 	print("[MapManager] Map %d loaded successfully" % map_id)
 
+
 ## Parse uncompressed cell data string and create CellResource array
 ## Flow: Uncompressed string → Array of CellResource objects
 func _create_cells(uncompressed_data: String, map_width: int) -> Array[CellResource]:
