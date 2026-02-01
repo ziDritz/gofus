@@ -1,35 +1,20 @@
 # MapManager.gd
 # AutoLoad singleton
 # Orchestrates map loading by coordinating Database, Compressor, and Datacenter to build MapResource
-
 extends Node
 
 # =========================
 # CONSTANTS
 # =========================
-
 const CELL_WIDTH: int = 53
 const CELL_HALF_WIDTH: float = 26.5
 const CELL_HEIGHT: int = 27  # Half-height for isometric
 const CELL_HALF_HEIGHT: float = 13.5  # Half-height for isometric
 const LEVEL_HEIGHT: int = 20  # Vertical offset per elevation level
 
-const GROUND_TILES_PATH: String = "res://assets/graphics/gfx/grounds/"
-const OBJECT_SPRITES_PATH: String = "res://assets/graphics/gfx/objects/"
-const BACKGROUNDS_PATH: String = "res://assets/graphics/gfx/backgrounds/"
-
-# =========================
-# ASSET CACHE
-# =========================
-
-var _ground_tile_cache: Dictionary = {}
-var _object_sprite_cache: Dictionary = {}
-var _background_cache: Dictionary = {}
-
 # =========================
 # INITIALIZATION
 # =========================
-
 func _ready() -> void:
 	print("[MapManager] Initializing...")
 	print("[MapManager] Ready")
@@ -37,7 +22,6 @@ func _ready() -> void:
 # =========================
 # MAP LOADING
 # =========================
-
 ## Orchestrate map loading process
 ## Flow: map_id → raw map dict → uncompressed cells → CellResource list → MapResource → Datacenter
 func load_map(map_id: int) -> void:
@@ -54,18 +38,15 @@ func load_map(map_id: int) -> void:
 	# Step 2: Extract compressed cell_data from map dictionary
 	var compressed_cell_data: String = map_data.mapData
 	
-	# Step 3: Call Compressor.uncompress() to get uncompressed cell data
-	var uncompressed_data: String = Compressor.uncompress(compressed_cell_data)
-	
-	# Step 4: Parse uncompressed data and instantiate CellResource objects
-	var cells: Array[CellResource] = _create_cells(uncompressed_data, map_data.width)
+	# Step 3: Parse uncompressed data and instantiate CellResource objects
+	var cells: Array[CellResource] = _create_cells(compressed_cell_data, map_data.width)
 	if cells.is_empty():
 		push_error("[MapManager] Failed to create cells for map %d" % map_id)
 		return
 	
 	print("[MapManager] Created %d cells" % cells.size())
 	
-	# Step 5: Create MapResource with all cells and metadata
+	# Step 4: Create MapResource with all cells and metadata
 	var map_resource: MapResource = MapResource.new(
 		map_id,
 		map_data.width,
@@ -73,11 +54,12 @@ func load_map(map_id: int) -> void:
 		cells
 	)
 	
-	# Step 6: Send MapResource to Datacenter
+	# Step 5: Send MapResource to Datacenter
 	Datacenter.set_current_map(map_resource)
+	# Step 6: Call map building
+	
 	
 	print("[MapManager] Map %d loaded successfully" % map_id)
-
 
 ## Parse uncompressed cell data string and create CellResource array
 ## Flow: Uncompressed string → Array of CellResource objects
@@ -141,7 +123,6 @@ func _create_cells(uncompressed_data: String, map_width: int) -> Array[CellResou
 # =========================
 # COORDINATE UTILITIES
 # =========================
-
 ## Convert cell number to (x, y) coordinates
 func get_cell_coordinates(cell_num: int, map_width: int) -> Vector2i:
 	# Simple row-major layout: cells per row = map_width
@@ -184,46 +165,3 @@ func get_pixel_position(cell_num: int, map_width: int, ground_level: int) -> Vec
 	var y: float = row * half_height - LEVEL_HEIGHT * (ground_level - 7)
 	
 	return Vector2(x, y)
-
-# =========================
-# ASSET CACHING
-# =========================
-
-## Get ground tile texture (cached)
-func get_ground_tile(tile_id: int) -> Texture2D:
-	if tile_id == 0:
-		return null
-	if not _ground_tile_cache.has(tile_id):
-		var path: String = GROUND_TILES_PATH + "%d.png" % tile_id
-		if ResourceLoader.exists(path):
-			_ground_tile_cache[tile_id] = load(path)
-		else:
-			push_warning("[MapManager] Ground tile not found: " + path)
-			return null
-	return _ground_tile_cache[tile_id]
-
-## Get object sprite texture (cached)
-func get_object_sprite(sprite_id: int) -> Texture2D:
-	if sprite_id == 0:
-		return null
-	if not _object_sprite_cache.has(sprite_id):
-		var path: String = OBJECT_SPRITES_PATH + "%d.png" % sprite_id
-		if ResourceLoader.exists(path):
-			_object_sprite_cache[sprite_id] = load(path)
-		else:
-			push_warning("[MapManager] Object sprite not found: " + path)
-			return null
-	return _object_sprite_cache[sprite_id]
-
-## Get background texture (cached)
-func get_background(bg_id: int) -> Texture2D:
-	if bg_id == 0:
-		return null
-	if not _background_cache.has(bg_id):
-		var path: String = BACKGROUNDS_PATH + "%d.png" % bg_id
-		if ResourceLoader.exists(path):
-			_background_cache[bg_id] = load(path)
-		else:
-			push_warning("[MapManager] Background not found: " + path)
-			return null
-	return _background_cache[bg_id]
