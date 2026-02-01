@@ -1,4 +1,4 @@
-# MapResource.gd
+# MapResource.gd (merges Map.as and DofusMap.as)
 # Data structure representing a complete map with all its cells and metadata
 
 extends Resource
@@ -19,6 +19,8 @@ var height: int
 
 ## All cells in the map, indexed by cell_id
 var cells: Array[CellResource]
+
+var background_id: int
 
 # =========================
 # INITIALIZATION

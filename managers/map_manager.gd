@@ -56,8 +56,9 @@ func load_map(map_id: int) -> void:
 	
 	# Step 5: Send MapResource to Datacenter
 	Datacenter.set_current_map(map_resource)
+
 	# Step 6: Call map building
-	
+	Battlefield.build_map(map_resource)
 	
 	print("[MapManager] Map %d loaded successfully" % map_id)
 
