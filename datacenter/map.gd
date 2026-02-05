@@ -1,4 +1,4 @@
-# Map.gd
+# Map.gd, equivalent of MalHandler.as
 # Node representing a complete map with all visual layers
   
 class_name Map
@@ -11,9 +11,6 @@ extends Node2D
 var loader_handler: LoaderHandler  
 var map_resource: MapResource = null
 var cells_dict: Dictionary = {}  # Quick lookup: cell_id -> CellResource
-  
-var _initialized: bool = false
-var _pending_map_resource: MapResource = null
   
 # =========================
 # NODES
@@ -46,25 +43,12 @@ func _ready():
 	if not object2_layer:
 		push_error("[Map] Object2Layer node not found!")
 	
-	# If initialize was called before _ready, build now
-	if _pending_map_resource != null:
-		_do_initialize(_pending_map_resource)
-		_pending_map_resource = null
   
   
 ## Initialize map with MapResource
 func initialize(p_map_resource: MapResource, p_loader_handler: LoaderHandler) -> void:
 
 	loader_handler = p_loader_handler
-	# If nodes aren't ready yet, store resource and build later
-	if not is_node_ready():
-		_pending_map_resource = p_map_resource
-		return
-	_do_initialize(p_map_resource)
-  
-  
-## Internal initialization after nodes are ready
-func _do_initialize(p_map_resource: MapResource) -> void:
 	map_resource = p_map_resource
 	
 	# Build quick lookup dictionary
@@ -73,10 +57,9 @@ func _do_initialize(p_map_resource: MapResource) -> void:
 		cells_dict[cell.cell_id] = cell
 	
 	print("[Map] Map %d initialized with %d cells" % [map_resource.map_id, map_resource.cells.size()])
-	_initialized = true
 	
 	# Build visual representation
-	_build_map()
+	_build()
   
   
 # =========================
@@ -84,48 +67,39 @@ func _do_initialize(p_map_resource: MapResource) -> void:
 # =========================
   
 ## Build all visual layers
-func _build_map() -> void:
+func _build() -> void:
 	print("[Map] Building map %d..." % map_resource.map_id)
-	_build_background()
-	_build_ground_layer()
-	_build_object1_layer()
-	_build_object2_layer()
-	print("[Map] Map %d built successfully" % map_resource.map_id)
-  
-  
-## Build background layer
-func _build_background() -> void:
-	if not background:
-		push_warning("[Map] Background node missing, skipping")
-		return
 	
-	# Note: background_id is no longer in MapResource, you'll need to add it
-	# or get it from elsewhere. For now, commenting out this functionality.
-	# TODO: Add background_id to MapResource or retrieve from MapManager
-	push_warning("[Map] Background building not implemented - background_id not available in MapResource")
-	
-	var bg_texture : Texture2D = loader_handler.get_background(map_resource.background_id)
+	# Build background
+	var bg_texture : Texture2D = loader_handler.get_background_texture(map_resource.background_id)
 	if bg_texture:
 		background.texture = bg_texture
 		background.centered = false
 		print("[Map]   Background: %d" % map_resource.background_id)
 	else:
 		push_warning("[Map] No background texture for ID: %d" % map_resource.background_id)
+
+	# _build_ground_layer
+	_build_ground_layer()
+
+	# _build_object1_layer
+	_build_object1_layer()
+	
+	# build_object2_layer
+	_build_object2_layer()
+	print("[Map] Map %d built successfully" % map_resource.map_id)
+  
   
   
 ## Build ground layer (all ground tiles)
 func _build_ground_layer() -> void:
-	if not ground_layer:
-		push_error("[Map] GroundLayer node missing!")
-		return
-	
 	var tile_count : int = 0
 	for cell in map_resource.cells:
 		if cell.layer_ground_num == 0:
 			continue
 		
 		# Get ground tile texture
-		var tile_texture : Texture2D = loader_handler.get_ground_tile(cell.layer_ground_num)
+		var tile_texture : Texture2D = loader_handler.get_ground_tile_texture(cell.layer_ground_num)
 		if not tile_texture:
 			continue
 		
@@ -193,7 +167,7 @@ func _build_object1_layer() -> void:
 		# --------------------------------------------------
 		# Assign texture
 		# --------------------------------------------------
-		var obj_texture: Texture2D = loader_handler.get_object_sprite(cell.layer_object1_num)
+		var obj_texture: Texture2D = loader_handler.get_object_sprite_texture(cell.layer_object1_num)
 		if not obj_texture:
 			continue
   
@@ -269,7 +243,7 @@ func _build_object2_layer() -> void:
 		# --------------------------------------------------
 		# Assign texture
 		# --------------------------------------------------
-		var obj_texture: Texture2D = loader_handler.get_object_sprite(cell.layer_object2_num)
+		var obj_texture: Texture2D = loader_handler.get_object_sprite_texture(cell.layer_object2_num)
 		if not obj_texture:
 			# Flash behavior: invalidate object
 			cell.layer_object2_num = 0

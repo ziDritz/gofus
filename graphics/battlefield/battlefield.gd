@@ -4,6 +4,8 @@ var loader_handler: LoaderHandler
 var current_map: Map
 var map_scene: PackedScene
 
+
+
 ## Initializes dependencies and event listening
 func _ready() -> void:
 	loader_handler = LoaderHandler.new()
@@ -22,6 +24,7 @@ func build_map(map_resource: MapResource) -> void:
 		current_map = null
 
 	current_map = map_scene.instantiate()
+	add_child(current_map) # add_child allow to call _ready
 	current_map.initialize(map_resource, loader_handler)
-	add_child(current_map)
+
 

@@ -19,17 +19,10 @@ var _object_sprite_cache: Dictionary = {}
 var _background_cache: Dictionary = {}
 
 # =========================
-# INITIALIZATION
-# =========================
-func _ready() -> void:
-	print("[LoaderHandler] Initializing...")
-	print("[LoaderHandler] Ready")
-
-# =========================
 # ASSET LOADING
 # =========================
 ## Get ground tile texture (cached)
-func get_ground_tile(tile_id: int) -> Texture2D:
+func get_ground_tile_texture(tile_id: int) -> Texture2D:
 	if tile_id == 0:
 		return null
 	
@@ -44,7 +37,7 @@ func get_ground_tile(tile_id: int) -> Texture2D:
 	return _ground_tile_cache[tile_id]
 
 ## Get object sprite texture (cached)
-func get_object_sprite(sprite_id: int) -> Texture2D:
+func get_object_sprite_texture(sprite_id: int) -> Texture2D:
 	if sprite_id == 0:
 		return null
 	
@@ -59,7 +52,7 @@ func get_object_sprite(sprite_id: int) -> Texture2D:
 	return _object_sprite_cache[sprite_id]
 
 ## Get background texture (cached)
-func get_background(bg_id: int) -> Texture2D:
+func get_background_texture(bg_id: int) -> Texture2D:
 	if bg_id == 0:
 		return null
 	
@@ -72,48 +65,3 @@ func get_background(bg_id: int) -> Texture2D:
 			return null
 	
 	return _background_cache[bg_id]
-
-# =========================
-# CACHE MANAGEMENT
-# =========================
-## Clear all cached assets (useful for memory management)
-func clear_cache() -> void:
-	_ground_tile_cache.clear()
-	_object_sprite_cache.clear()
-	_background_cache.clear()
-	print("[LoaderHandler] All caches cleared")
-
-## Clear specific cache type
-func clear_ground_cache() -> void:
-	_ground_tile_cache.clear()
-	print("[LoaderHandler] Ground tile cache cleared")
-
-func clear_object_cache() -> void:
-	_object_sprite_cache.clear()
-	print("[LoaderHandler] Object sprite cache cleared")
-
-func clear_background_cache() -> void:
-	_background_cache.clear()
-	print("[LoaderHandler] Background cache cleared")
-
-## Get cache statistics
-func get_cache_stats() -> Dictionary:
-	return {
-		"ground_tiles": _ground_tile_cache.size(),
-		"object_sprites": _object_sprite_cache.size(),
-		"backgrounds": _background_cache.size(),
-		"total": _ground_tile_cache.size() + _object_sprite_cache.size() + _background_cache.size()
-	}
-
-## Preload assets for a specific range of IDs (optional optimization)
-func preload_ground_tiles(tile_ids: Array[int]) -> void:
-	for tile_id in tile_ids:
-		get_ground_tile(tile_id)
-
-func preload_object_sprites(sprite_ids: Array[int]) -> void:
-	for sprite_id in sprite_ids:
-		get_object_sprite(sprite_id)
-
-func preload_backgrounds(bg_ids: Array[int]) -> void:
-	for bg_id in bg_ids:
-		get_background(bg_id)

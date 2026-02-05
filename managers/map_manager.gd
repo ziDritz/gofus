@@ -54,10 +54,10 @@ func load_map(map_id: int) -> void:
 		map_data.bgID
 	)
 	
-	# Step 5: Send MapResource to Datacenter
+	# Step 4: Send MapResource to Datacenter
 	Datacenter.set_current_map(map_resource)
 
-	# Step 6: Call map building
+	# Step 5: Call map building
 	Battlefield.build_map(map_resource)
 	
 	print("[MapManager] Map %d loaded successfully" % map_id)
@@ -82,7 +82,7 @@ func _create_cells(uncompressed_data: String, map_width: int) -> Array[CellResou
 		var cell_data: String = uncompressed_data.substr(start_pos, 10)
 		
 		# Use Compressor to parse cell data
-		var cell_dict: Dictionary = Compressor.parse_cell(cell_data, i)
+		var cell_dict: Dictionary = Compressor.uncompress_cell(cell_data, i)
 		if cell_dict.is_empty():
 			push_error("[MapManager] Failed to parse cell %d" % i)
 			return []
