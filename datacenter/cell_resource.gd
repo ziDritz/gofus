@@ -12,10 +12,10 @@ class_name CellResource
 var cell_id: int
 
 ## Cell x position in grid
-var x: int
+var grid_x: int
 
 ## Cell y position in grid
-var y: int
+var grid_y: int
 
 ## Whether the cell can be walked on
 var walkable: bool
@@ -113,8 +113,8 @@ func _init(
 	p_raw_data: String = ""
 ) -> void:
 	cell_id = p_cell_id
-	x = p_x
-	y = p_y
+	grid_x = p_x
+	grid_y = p_y
 	walkable = p_walkable
 	active = p_active
 	line_of_sight = p_line_of_sight

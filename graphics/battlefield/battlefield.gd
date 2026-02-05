@@ -4,7 +4,14 @@ var loader_handler: LoaderHandler
 var current_map: Map
 var map_scene: PackedScene
 
-
+# =========================
+# CONSTANTS
+# =========================
+const CELL_WIDTH: int = 53
+const CELL_HALF_WIDTH: float = 26.5
+const CELL_HEIGHT: int = 27  # Half-height for isometric
+const CELL_HALF_HEIGHT: float = 13.5  # Half-height for isometric
+const LEVEL_HEIGHT: int = 20  # Vertical offset per elevation level
 
 ## Initializes dependencies and event listening
 func _ready() -> void:

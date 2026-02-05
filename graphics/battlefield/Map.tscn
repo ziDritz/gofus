@@ -8,7 +8,10 @@ script = ExtResource("1_heo5x")
 [node name="Background" type="Sprite2D" parent="."]
 
 [node name="GroundLayer" type="Node2D" parent="."]
+z_index = 1
 
 [node name="Object1Layer" type="Node2D" parent="."]
+z_index = 2
 
 [node name="Object2Layer" type="Node2D" parent="."]
+z_index = 3

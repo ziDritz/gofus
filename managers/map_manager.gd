@@ -3,14 +3,7 @@
 # Orchestrates map loading by coordinating Database, Compressor, and Datacenter to build MapResource
 extends Node
 
-# =========================
-# CONSTANTS
-# =========================
-const CELL_WIDTH: int = 53
-const CELL_HALF_WIDTH: float = 26.5
-const CELL_HEIGHT: int = 27  # Half-height for isometric
-const CELL_HALF_HEIGHT: float = 13.5  # Half-height for isometric
-const LEVEL_HEIGHT: int = 20  # Vertical offset per elevation level
+
 
 # =========================
 # INITIALIZATION
@@ -138,9 +131,9 @@ func get_cell_number(x: int, y: int, map_width: int) -> int:
 
 ## Calculate pixel position for a cell
 func get_pixel_position(cell_num: int, map_width: int, ground_level: int) -> Vector2:
-	var cell_width: int = CELL_WIDTH
-	var half_width: float = CELL_HALF_WIDTH
-	var half_height: float = CELL_HALF_HEIGHT
+	var cell_width: int = Battlefield.CELL_WIDTH
+	var half_width: float = Battlefield.CELL_HALF_WIDTH
+	var half_height: float = Battlefield.CELL_HALF_HEIGHT
 	
 	var row: int = 0
 	var col: int = -1
@@ -164,6 +157,6 @@ func get_pixel_position(cell_num: int, map_width: int, ground_level: int) -> Vec
 	
 	# Compute final pixel position
 	var x: float = col * cell_width + x_offset
-	var y: float = row * half_height - LEVEL_HEIGHT * (ground_level - 7)
+	var y: float = row * half_height - Battlefield.LEVEL_HEIGHT * (ground_level - 7)
 	
 	return Vector2(x, y)
