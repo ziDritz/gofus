@@ -20,6 +20,7 @@ var height: int
 ## All cells in the map, indexed by cell_id
 var cells: Array[CellResource]
 
+
 var background_id: int
 
 # =========================
@@ -28,8 +29,9 @@ var background_id: int
 
 ## Initialize map with all cells and metadata
 ## Flow: Raw parameters → initialized MapResource
-func _init(p_map_id: int, p_width: int, p_height: int, p_cells: Array[CellResource]) -> void:
+func _init(p_map_id: int, p_width: int, p_height: int, p_cells: Array[CellResource], p_background_id: int) -> void:
 	map_id = p_map_id
 	width = p_width
 	height = p_height
 	cells = p_cells
+	background_id = p_background_id

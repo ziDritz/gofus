@@ -35,10 +35,9 @@ func load_map(map_id: int) -> void:
 	
 	print("[MapManager] Map data loaded: width=%d, height=%d" % [map_data.width, map_data.height])
 	
-	# Step 2: Extract compressed cell_data from map dictionary
+
+	# Step 2: Parse uncompressed data and instantiate CellResource objects
 	var compressed_cell_data: String = map_data.mapData
-	
-	# Step 3: Parse uncompressed data and instantiate CellResource objects
 	var cells: Array[CellResource] = _create_cells(compressed_cell_data, map_data.width)
 	if cells.is_empty():
 		push_error("[MapManager] Failed to create cells for map %d" % map_id)
@@ -46,12 +45,13 @@ func load_map(map_id: int) -> void:
 	
 	print("[MapManager] Created %d cells" % cells.size())
 	
-	# Step 4: Create MapResource with all cells and metadata
+	# Step 3: Create MapResource with all cells and metadata
 	var map_resource: MapResource = MapResource.new(
 		map_id,
 		map_data.width,
 		map_data.height,
-		cells
+		cells,
+		map_data.bgID
 	)
 	
 	# Step 5: Send MapResource to Datacenter
@@ -61,6 +61,7 @@ func load_map(map_id: int) -> void:
 	Battlefield.build_map(map_resource)
 	
 	print("[MapManager] Map %d loaded successfully" % map_id)
+
 
 ## Parse uncompressed cell data string and create CellResource array
 ## Flow: Uncompressed string → Array of CellResource objects

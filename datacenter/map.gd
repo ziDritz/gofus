@@ -14,8 +14,6 @@ var cells_dict: Dictionary = {}  # Quick lookup: cell_id -> CellResource
   
 var _initialized: bool = false
 var _pending_map_resource: MapResource = null
-
-var background_id: int
   
 # =========================
 # NODES
@@ -69,7 +67,6 @@ func initialize(p_map_resource: MapResource, p_loader_handler: LoaderHandler) ->
 func _do_initialize(p_map_resource: MapResource) -> void:
 	map_resource = p_map_resource
 	
-	background_id = p_map_resource.background_id
 	# Build quick lookup dictionary
 	cells_dict.clear()
 	for cell in map_resource.cells:
@@ -107,13 +104,13 @@ func _build_background() -> void:
 	# TODO: Add background_id to MapResource or retrieve from MapManager
 	push_warning("[Map] Background building not implemented - background_id not available in MapResource")
 	
-	var bg_texture : Texture2D = loader_handler.get_background(background_id)
+	var bg_texture : Texture2D = loader_handler.get_background(map_resource.background_id)
 	if bg_texture:
 		background.texture = bg_texture
 		background.centered = false
-		print("[Map]   Background: %d" % background_id)
+		print("[Map]   Background: %d" % map_resource.background_id)
 	else:
-		push_warning("[Map] No background texture for ID: %d" % background_id)
+		push_warning("[Map] No background texture for ID: %d" % map_resource.background_id)
   
   
 ## Build ground layer (all ground tiles)
