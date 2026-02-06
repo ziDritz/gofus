@@ -35,14 +35,10 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=742
-window/size/viewport_height=556
+window/size/viewport_width=1484
+window/size/viewport_height=1112
 window/stretch/mode="viewport"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/console/plugin.cfg")
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0

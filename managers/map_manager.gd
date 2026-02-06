@@ -26,7 +26,7 @@ func load_map(map_id: int) -> void:
 		push_error("[MapManager] Failed to get map data for map %d" % map_id)
 		return
 	
-	print("[MapManager] Map data loaded: width=%d, height=%d" % [map_data.width, map_data.height])
+	print("[MapManager] Map data loaded: width=%d, height=%d, bgID=%d" % [map_data.width, map_data.height, map_data.bgID])
 	
 
 	# Step 2: Parse uncompressed data and instantiate CellResource objects
