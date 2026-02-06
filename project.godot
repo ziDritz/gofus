@@ -21,9 +21,9 @@ Battlefield="*res://graphics/battlefield/battlefield.gd"
 Database="*res://database/database.gd"
 Datacenter="*res://datacenter/datacenter.gd"
 MapManager="*res://managers/map_manager.gd"
-MapParser="res://_tools/map_parser/map_parser.gd"
 Compressor="*res://utils/compressor.gd"
 Console="*res://addons/console/console.gd"
+ConsoleCommandAdder="*res://_tools/console_command_adder.gd"
 
 [debug]
 
@@ -42,3 +42,7 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/console/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

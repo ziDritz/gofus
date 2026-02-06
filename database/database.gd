@@ -59,20 +59,20 @@ func load_all_maps() -> void:
 			"places": row[4],
 			"key": row[5],
 			"mapData": row[6],
-			"monsters": row[7] if row.size() > 7 else "",
-			"capabilities": int(row[8]) if row.size() > 8 else 0,
-			"mappos": row[9] if row.size() > 9 else "",
-			"numgroup": int(row[10]) if row.size() > 10 else 0,
-			"minSize": int(row[11]) if row.size() > 11 else 0,
-			"fixSize": int(row[12]) if row.size() > 12 else 0,
-			"maxSize": int(row[13]) if row.size() > 13 else 0,
-			"forbidden": row[14] if row.size() > 14 else "",
-			"sniffed": int(row[15]) if row.size() > 15 else 0,
-			"musicID": int(row[16]) if row.size() > 16 else 0,
-			"ambianceID": int(row[17]) if row.size() > 17 else 0,
-			"bgID": int(row[18]) if row.size() > 18 else 0,
-			"outDoor": int(row[19]) if row.size() > 19 else 0,
-			"maxMerchant": int(row[20]) if row.size() > 20 else 0
+			"monsters": row[7],
+			"capabilities": int(row[8]),
+			"mappos": row[9],
+			"numgroup": int(row[10]),
+			"minSize": int(row[11]),
+			"fixSize": int(row[12]),
+			"maxSize": int(row[13]),
+			"forbidden": row[14],
+			"sniffed": int(row[15]),
+			"musicID": int(row[16]),
+			"ambianceID": int(row[17]),
+			"bgID": int(row[18]),
+			"outDoor": int(row[19]),
+			"maxMerchant": int(row[20])
 		}
 		
 		_map_cache[map_data.id] = map_data
@@ -80,8 +80,7 @@ func load_all_maps() -> void:
 	
 	file.close()
 	print("[Database] Loaded %d maps from CSV" % count)
-	if count > 0:
-		print("[Database] First map ID: %d" % _map_cache.keys()[0])
+
 
 ## Retrieve map data from cache using map_id as key
 ## Flow: map_id → raw map data dictionary

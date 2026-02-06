@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Python script extracts character animations from Dofus SWF files and converts them into Godot-ready PNG sequences with proper sprite centering metadata. It uses FFDec (JPEXS Free Flash Decompiler) to parse SWF files, extract sprites, apply transformation matrices, and export bounds information for runtime offset application.
+This Python script extracts character animations from Dofus SWF files and converts them into PNG sequences with proper sprite centering metadata. It uses FFDec (JPEXS Free Flash Decompiler) to parse SWF files, extract sprites, apply transformation matrices, and export bounds information for runtime offset application.
 
 ---
 
