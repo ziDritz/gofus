@@ -23,6 +23,7 @@ Datacenter="*res://datacenter/datacenter.gd"
 MapManager="*res://managers/map_manager.gd"
 MapParser="res://_tools/map_parser/map_parser.gd"
 Compressor="*res://utils/compressor.gd"
+Console="*res://addons/console/console.gd"
 
 [debug]
 
@@ -37,3 +38,7 @@ gdscript/warnings/unused_signal=0
 window/size/viewport_width=742
 window/size/viewport_height=556
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/console/plugin.cfg")

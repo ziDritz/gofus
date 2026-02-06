@@ -12,6 +12,9 @@ const CELL_HALF_WIDTH: float = 26.5
 const CELL_HEIGHT: int = 27  # Half-height for isometric
 const CELL_HALF_HEIGHT: float = 13.5  # Half-height for isometric
 const LEVEL_HEIGHT: int = 20  # Vertical offset per elevation level
+const G_BOUNDS_JSON_PATH: String = "assets/graphics/gfx/grounds/g_bounds.json"
+const O_BOUNDS_JSON_PATH: String = "assets/graphics/gfx/objects/o_bounds.json"
+
 
 ## Initializes dependencies and event listening
 func _ready() -> void:
@@ -33,5 +36,3 @@ func build_map(map_resource: MapResource) -> void:
 	current_map = map_scene.instantiate()
 	add_child(current_map) # add_child allow to call _ready
 	current_map.initialize(map_resource, loader_handler)
-
-

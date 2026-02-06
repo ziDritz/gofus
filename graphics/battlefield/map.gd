@@ -107,10 +107,11 @@ func _build() -> void:
 		# ----------------------------------------------
 		if cell.layer_ground_num != 0:
 			var ground_sprite: Sprite2D = Sprite2D.new()
-			ground_sprite.centered = false
+			# ground_sprite.centered = false
 			ground_sprite.texture = loader_handler.get_ground_tile_texture(cell.layer_ground_num)
+			# var bounds: Vector2 = get_bounds_from_json(cell.layer_ground_num, Battlefield.G_BOUNDS_JSON_PATH)
+			# ground_sprite.offset = bounds
 			ground_sprite.position = cell_position
-			# ground_sprite.z_index = cell_index
 
 			if cell.ground_slope != 1:
 				ground_sprite.frame = cell.ground_slope
@@ -131,8 +132,10 @@ func _build() -> void:
 			var object1_sprite: Sprite2D = Sprite2D.new()
 			object1_sprite.centered = false
 			object1_sprite.texture = loader_handler.get_object_sprite_texture(cell.layer_object1_num)
+			var bounds: Vector2 = get_bounds_from_json(cell.layer_object1_num, Battlefield.O_BOUNDS_JSON_PATH)
+			object1_sprite.offset = bounds
 			object1_sprite.position = cell_position
-			# object1_sprite.z_index = cell_index
+			
 
 			if cell.ground_slope == 1 and cell.layer_object1_rot != 0:
 				object1_sprite.rotation_degrees = float(cell.layer_object1_rot * 90)
@@ -151,10 +154,38 @@ func _build() -> void:
 			var object2_sprite: Sprite2D = Sprite2D.new()
 			object2_sprite.centered = false
 			object2_sprite.texture = loader_handler.get_object_sprite_texture(cell.layer_object2_num)
+			var bounds: Vector2 = get_bounds_from_json(cell.layer_object2_num, Battlefield.O_BOUNDS_JSON_PATH)
+			object2_sprite.offset = bounds
 			object2_sprite.position = cell_position
-			# object2_sprite.z_index = cell_index * 100
+			
 
 			if cell.layer_object2_flip:
 				object2_sprite.scale.x = -1.0
 
 			object2_layer.add_child(object2_sprite)
+
+
+
+func get_bounds_from_json(gfx_id: int, file_path: String) -> Vector2:
+	var bounds: Vector2 = Vector2.ZERO
+
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file:
+		var json = JSON.new()
+		var error = json.parse(file.get_as_text())
+		if error == OK:
+			var data = json.data
+			if data.has(str(gfx_id)):
+				var entry = data[str(gfx_id)]
+				bounds = Vector2(entry["horizontal"], entry["vertical"])
+				# print("ID: %s, Vector: %s" % [gfx_id, bounds])
+			else:
+				print("No entry found for gfx_id: ", gfx_id)
+		else:
+			print("Error parsing JSON: ", json.get_error_message())
+		file.close()
+	else:
+		print("Error opening file: ", file_path)
+
+	return bounds
+	
