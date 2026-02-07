@@ -36,3 +36,7 @@ func build_map(map_resource: MapResource) -> void:
 	current_map = map_scene.instantiate()
 	add_child(current_map) # add_child allow to call _ready
 	current_map.initialize(map_resource, loader_handler)
+
+
+func display_cell_ids():
+	current_map.display_cell_ids()

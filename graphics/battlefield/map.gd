@@ -21,6 +21,7 @@ var ground_layer: Node2D
 var object1_layer: Node2D
 var object2_layer: Node2D
 var interaction_layer: Node2D
+var cell_ids_layer: Node2D
 
 # =========================
 # INITIALIZATION
@@ -33,6 +34,7 @@ func _ready() -> void:
 	object1_layer = get_node_or_null("Object1Layer")
 	object2_layer = get_node_or_null("Object2Layer")
 	interaction_layer = get_node_or_null("InteractionLayer")
+	cell_ids_layer = get_node_or_null("CellIDSLayer")
 
 	background.centered = false
 
@@ -107,16 +109,15 @@ func _build() -> void:
 		# ----------------------------------------------
 		if cell.layer_ground_num != 0:
 			var ground_sprite: Sprite2D = Sprite2D.new()
-			# ground_sprite.centered = false
+			ground_sprite.centered = false
 			ground_sprite.hframes = get_frame_count_from_json(cell.layer_ground_num, Battlefield.G_METADATAS_JSON_PATH)
 			ground_sprite.texture = loader_handler.get_ground_tile_texture(cell.layer_ground_num)
-			# var bounds: Vector2 = get_bounds_from_json(cell.layer_ground_num, Battlefield.G_BOUNDS_JSON_PATH)
-			# ground_sprite.offset = bounds
+			var bounds: Vector2 = get_bounds_from_json(cell.layer_ground_num, Battlefield.G_METADATAS_JSON_PATH)
+			ground_sprite.offset = bounds
 			ground_sprite.position = cell_position
 
 			if cell.ground_slope != 1:
-				if cell.layer_ground_num == 49: print("cell_id: %s, cell.ground_slope: %s" % [cell_index,cell.ground_slope])
-				ground_sprite.frame = cell.ground_slope
+				ground_sprite.frame = cell.ground_slope - 1
 			elif cell.layer_ground_rot != 0:
 				ground_sprite.rotation_degrees = float(cell.layer_ground_rot * 90)
 				if int(ground_sprite.rotation_degrees) % 180 != 0:
@@ -166,6 +167,32 @@ func _build() -> void:
 
 			object2_layer.add_child(object2_sprite)
 
+		# ----------------------------------------------
+		# Cell ID label
+		# ----------------------------------------------
+		var cell_id_label: Label = Label.new()
+		cell_id_label.text = str(cell_index)
+		cell_id_label.add_theme_font_size_override("font_size", 12)
+		cell_id_label.add_theme_color_override("font_color", Color.WHITE)
+		cell_id_label.add_theme_color_override("font_outline_color", Color.BLACK)
+		cell_id_label.add_theme_constant_override("outline_size", 2)
+		
+		# Center the label on the cell position
+		cell_id_label.position = cell_position
+		cell_id_label.position.x -= 10  # Approximate centering offset
+		cell_id_label.position.y -= 6
+		
+		cell_ids_layer.add_child(cell_id_label)
+
+
+# =========================
+# DISPLAY METHODS
+# =========================
+
+## Toggle visibility of cell ID labels
+func display_cell_ids() -> void:
+	if cell_ids_layer:
+		cell_ids_layer.visible = not cell_ids_layer.visible
 
 
 func get_bounds_from_json(gfx_id: int, file_path: String) -> Vector2:
