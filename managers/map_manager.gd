@@ -9,7 +9,6 @@ extends Node
 # INITIALIZATION
 # =========================
 func _ready() -> void:
-	print("[MapManager] Initializing...")
 	print("[MapManager] Ready")
 
 # =========================

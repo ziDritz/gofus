@@ -12,7 +12,7 @@ const CELL_HALF_WIDTH: float = 53
 const CELL_HEIGHT: int = 54  # Half-height for isometric
 const CELL_HALF_HEIGHT: float = 27  # Half-height for isometric
 const LEVEL_HEIGHT: int = 40  # Vertical offset per elevation level
-const G_BOUNDS_JSON_PATH: String = "assets/graphics/gfx/grounds/g_bounds_x2.json"
+const G_METADATAS_JSON_PATH: String = "assets/graphics/gfx/grounds/ground_metadatas.json"
 const O_BOUNDS_JSON_PATH: String = "assets/graphics/gfx/objects/o_bounds_x2.json"
 
 

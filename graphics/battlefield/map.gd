@@ -108,12 +108,14 @@ func _build() -> void:
 		if cell.layer_ground_num != 0:
 			var ground_sprite: Sprite2D = Sprite2D.new()
 			# ground_sprite.centered = false
+			ground_sprite.hframes = get_frame_count_from_json(cell.layer_ground_num, Battlefield.G_METADATAS_JSON_PATH)
 			ground_sprite.texture = loader_handler.get_ground_tile_texture(cell.layer_ground_num)
 			# var bounds: Vector2 = get_bounds_from_json(cell.layer_ground_num, Battlefield.G_BOUNDS_JSON_PATH)
 			# ground_sprite.offset = bounds
 			ground_sprite.position = cell_position
 
 			if cell.ground_slope != 1:
+				if cell.layer_ground_num == 49: print("cell_id: %s, cell.ground_slope: %s" % [cell_index,cell.ground_slope])
 				ground_sprite.frame = cell.ground_slope
 			elif cell.layer_ground_rot != 0:
 				ground_sprite.rotation_degrees = float(cell.layer_ground_rot * 90)
@@ -189,3 +191,26 @@ func get_bounds_from_json(gfx_id: int, file_path: String) -> Vector2:
 
 	return bounds
 	
+
+func get_frame_count_from_json(gfx_id: int, file_path: String) -> int:
+	var frame_count: int = -1
+
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file:
+		var json = JSON.new()
+		var error = json.parse(file.get_as_text())
+		if error == OK:
+			var data = json.data
+			if data.has(str(gfx_id)):
+				var entry = data[str(gfx_id)]
+				frame_count = int(entry["frame_count"])
+				# print("ID: %s, Frame count: %s" % [gfx_id, frame_count])
+			else:
+				print("No entry found for gfx_id: ", gfx_id)
+		else:
+			print("Error parsing JSON: ", json.get_error_message())
+		file.close()
+	else:
+		print("Error opening file: ", file_path)
+
+	return frame_count
