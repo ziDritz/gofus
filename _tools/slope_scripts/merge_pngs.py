@@ -11,15 +11,44 @@ import os
 import re
 import json
 import sys
+import logging
 from PIL import Image
+
+
+def setup_logging(main_folder):
+    """
+    Configure logging to write both to a file and the console.
+    """
+    log_path = os.path.join(main_folder, "spritesheet.log")
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(log_path, encoding="utf-8"),
+            logging.StreamHandler(sys.stdout),
+        ],
+    )
+
+    logging.info("Logging initialized")
+    logging.info(f"Log file: {log_path}")
+
 
 def is_two_number_folder(name):
     """
-    Match folders that contain exactly two numbers, e.g. DefineSprite_1581_49
+    Match folder names that contain exactly two numbers separated by an underscore.
+
+    Examples:
+        DefineSprite_1581_49  -> matches (1581, 49)
+        DefineSprite_891      -> no match
     """
-    return re.search(r'(\d+).*?(\d+)', name)
+    return re.search(r'_(\d+)_(\d+)$', name)
+
 
 def merge_pngs_horizontally(png_paths, output_path):
+    """
+    Merge multiple PNG images into a single horizontal spritesheet.
+    """
     images = [Image.open(p) for p in png_paths]
 
     widths, heights = zip(*(img.size for img in images))
@@ -34,10 +63,11 @@ def merge_pngs_horizontally(png_paths, output_path):
         x_offset += img.width
 
     spritesheet.save(output_path)
-    print(f"  ✔ Spritesheet created: {output_path}")
+    logging.info(f"Spritesheet created: {output_path}")
+
 
 def main(main_folder):
-    print(f"Starting processing in: {main_folder}")
+    logging.info(f"Starting processing in: {main_folder}")
 
     metadata = {}
 
@@ -49,26 +79,25 @@ def main(main_folder):
             continue
 
         number_1, number_2 = match.groups()
-        print(f"\nProcessing folder: {folder_name}")
-        print(f"  Detected numbers: {number_1}, {number_2}")
+        logging.info(f"Processing folder: {folder_name}")
+        logging.info(f"Detected numbers: {number_1}, {number_2}")
 
-        png_files = sorted([
-            os.path.join(root, f)
-            for f in files
-            if f.lower().endswith(".png")
-        ])
+        png_files = sorted(
+            [os.path.join(root, f) for f in files if f.lower().endswith(".png")],
+            key=lambda x: int(re.search(r'(\d+)\.png$', os.path.basename(x)).group(1))
+        )
 
         png_count = len(png_files)
-        print(f"  PNG count: {png_count}")
+        logging.info(f"PNG count: {png_count}")
 
         if png_count <= 1:
-            print("  Skipping (not enough PNG files)")
+            logging.warning("Skipping folder (not enough PNG files)")
             continue
 
         output_name = f"{number_2}.png"
         output_path = os.path.join(main_folder, output_name)
 
-        print("  Merging PNG files...")
+        logging.info("Merging PNG files")
         merge_pngs_horizontally(png_files, output_path)
 
         metadata[number_2] = {
@@ -79,8 +108,9 @@ def main(main_folder):
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2)
 
-    print("\nAll done!")
-    print(f"Metadata written to: {json_path}")
+    logging.info("Processing complete")
+    logging.info(f"Metadata written to: {json_path}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -88,4 +118,9 @@ if __name__ == "__main__":
         print("Usage: python build_spritesheets.py <main_folder>")
         sys.exit(1)
 
-    main(sys.argv[1])
+    main_folder = sys.argv[1]
+
+    # Initialize logging before doing anything else
+    setup_logging(main_folder)
+
+    main(main_folder)

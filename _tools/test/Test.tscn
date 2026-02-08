@@ -11,6 +11,7 @@ script = ExtResource("1_5kc3e")
 script = ExtResource("3_gxbu6")
 
 [node name="UI" type="Control" parent="."]
+visible = false
 z_index = 6
 layout_mode = 3
 anchors_preset = 15

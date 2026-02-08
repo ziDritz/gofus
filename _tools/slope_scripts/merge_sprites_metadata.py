@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Usage: python3 merge_sprites_metadata.py sprites_metadata.json g_bounds_x2.json output.json
+# Usage: python merge_sprites_metadata.py sprites_metadata.json g_bounds_x2.json output.json
 
 import json
 import sys
