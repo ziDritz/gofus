@@ -1,38 +1,25 @@
 # Database.gd
 # AutoLoad singleton
-# Handles map data persistence and provides quick access to map data
+# Handles data persistence and provides quick access to data
 
 extends Node
 
-# =========================
-# CONSTANTS
-# =========================
 
-const CSV_PATH := "res://database/maps_data.csv"
-
-# =========================
-# CACHE
-# =========================
+const CSV_PATH : String = "res://database/maps_data.csv"
 
 ## Stores all loaded map data indexed by map_id for quick lookup
-var _map_cache: Dictionary = {}
+var _map_cache: Dictionary = {} # I tried to use an array instead, but very little gains in the end
 
-# =========================
-# INITIALIZATION
-# =========================
 
 func _ready() -> void:
 	print("[Database] Initializing...")
-	load_all_maps()
+	_load_all_maps()
 	print("[Database] Ready")
 
-# =========================
-# MAP DATA LOADING
-# =========================
 
 ## Load all map data from CSV file
 ## Flow: CSV file → Dictionary of map dictionaries
-func load_all_maps() -> void:
+func _load_all_maps() -> void:
 	print("[Database] Loading maps from CSV: %s" % CSV_PATH)
 	
 	var file: FileAccess = FileAccess.open(CSV_PATH, FileAccess.READ)
@@ -48,7 +35,7 @@ func load_all_maps() -> void:
 	var count: int = 0
 	while not file.eof_reached():
 		var row: PackedStringArray = file.get_csv_line()
-		if row.size() < 7:  # Skip empty/invalid rows
+		if row.size() < 7:  # Skip empty/invalid rows, used toskip the last row get (empty)
 			continue
 		
 		var map_data: Dictionary = {
