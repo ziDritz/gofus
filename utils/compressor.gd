@@ -54,7 +54,7 @@ func get_int_by_hashed_value(c: String) -> int:
 ## Apply decompression algorithm to cell data
 ## Parse single cell data (10 characters) into cell properties dictionary
 ## Flow: Compressed string → Uncompressed string
-func uncompress_cell(cell_data: String, cell_num: int) -> Dictionary:
+func uncompress_cell_data(cell_data: String, cell_num: int) -> Dictionary:
 	if cell_data.length() != 10:
 		push_error("[Compressor] Cell %d: Expected 10 chars, got %d" % [cell_num, cell_data.length()])
 		return {}

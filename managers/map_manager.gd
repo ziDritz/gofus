@@ -18,69 +18,40 @@ func _ready() -> void:
 ## Flow: map_id → raw map dict → uncompressed cells → CellResource list → MapResource → Datacenter
 func load_map(map_id: int) -> void:
 	print("[MapManager] Loading map %d..." % map_id)
-	
+
+
 	# Step 1: Request map data from Database
 	var map_data: Dictionary = Database.get_map_data(map_id)
 	if map_data.is_empty():
 		push_error("[MapManager] Failed to get map data for map %d" % map_id)
 		return
-	
-	print("[MapManager] Map data loaded: width=%d, height=%d, bgID=%d" % [map_data.width, map_data.height, map_data.bgID])
-	
+
 
 	# Step 2: Parse uncompressed data and instantiate CellResource objects
 	var compressed_cell_data: String = map_data.mapData
-	var cells: Array[CellResource] = _create_cells(compressed_cell_data, map_data.width)
-	if cells.is_empty():
-		push_error("[MapManager] Failed to create cells for map %d" % map_id)
+
+	# Validate map data length
+	if compressed_cell_data.length() % 10 != 0:
+		push_error("[MapManager] MapData length must be divisible by 10, got: %d" % compressed_cell_data.length())
 		return
 	
-	print("[MapManager] Created %d cells" % cells.size())
-	
-	# Step 3: Create MapResource with all cells and metadata
-	var map_resource: MapResource = MapResource.new(
-		map_id,
-		map_data.width,
-		map_data.height,
-		cells,
-		map_data.bgID
-	)
-	
-	# Step 4: Send MapResource to Datacenter
-	Datacenter.set_current_map(map_resource)
+	var actual_cell_count: int = compressed_cell_data.length() / 10
+	var cell_resources: Array[CellResource] = []
+	cell_resources.resize(actual_cell_count)
 
-	# Step 5: Call map building
-	Battlefield.build_map(map_resource)
-	
-	print("[MapManager] Map %d loaded successfully" % map_id)
-
-
-## Parse uncompressed cell data string and create CellResource array
-## Flow: Uncompressed string → Array of CellResource objects
-func _create_cells(uncompressed_data: String, map_width: int) -> Array[CellResource]:
-	# Validate map data length
-	if uncompressed_data.length() % 10 != 0:
-		push_error("[MapManager] MapData length must be divisible by 10, got: %d" % uncompressed_data.length())
-		return []
-	
-	var actual_cell_count: int = uncompressed_data.length() / 10
-	print("[MapManager] Cell count: %d" % actual_cell_count)
-	
-	var cells: Array[CellResource] = []
-	
 	# Parse each cell
 	for i in range(actual_cell_count):
 		var start_pos: int = i * 10
-		var cell_data: String = uncompressed_data.substr(start_pos, 10)
+		var cell_data: String = compressed_cell_data.substr(start_pos, 10)
 		
 		# Use Compressor to parse cell data
-		var cell_dict: Dictionary = Compressor.uncompress_cell(cell_data, i)
+		var cell_dict: Dictionary = Compressor.uncompress_cell_data(cell_data, i)
 		if cell_dict.is_empty():
 			push_error("[MapManager] Failed to parse cell %d" % i)
-			return []
+			return
 		
 		# Calculate cell coordinates
-		var coords: Vector2i = get_cell_coordinates(i, map_width)
+		var coords: Vector2i = get_cell_coordinates(i, map_data.width)
 		
 		# Create CellResource from parsed data
 		var cell_resource: CellResource = CellResource.new(
@@ -110,9 +81,27 @@ func _create_cells(uncompressed_data: String, map_width: int) -> Array[CellResou
 			cell_dict.raw_data
 		)
 		
-		cells.append(cell_resource)
+		cell_resources[i] = cell_resource
 	
-	return cells
+	
+	# Step 3: Create MapResource with all cells and metadata
+	var map_resource: MapResource = MapResource.new(
+		map_id,
+		map_data.width,
+		map_data.height,
+		cell_resources,
+		map_data.bgID
+	)
+	
+	# Step 4: Send MapResource to Datacenter
+	Datacenter.set_current_map(map_resource)
+
+	# Step 5: Call map building
+	Battlefield.build_map(map_resource)
+	print("[MapManager] Map resource loaded: width=%d, height=%d, bgID=%d, cell count=%d" % [map_data.width, map_data.height, map_data.bgID, actual_cell_count])
+
+
+
 
 # =========================
 # COORDINATE UTILITIES
