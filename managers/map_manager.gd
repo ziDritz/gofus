@@ -85,7 +85,7 @@ func load_map(map_id: int) -> void:
 	print("[MapManager] MapHandler resource initialized: width=%d, height=%d, bgID=%d, cell count=%d" % [map_data.width, map_data.height, map_data.bgID, actual_cell_count])
 
 	# Step 4: Send MapResource to Datacenter
-	Datacenter.set_current_map(map_resource)
+	Datacenter.set_current_map_resource(map_resource)
 
 	# Step 5: Call map building
 	Battlefield.build_map(map_resource)
