@@ -80,16 +80,11 @@ var is_targetable: bool
 ## Raw cell data string
 var raw_data: String
 
-# =========================
-# INITIALIZATION
-# =========================
 
 ## Initialize cell with all properties
 ## Flow: Raw cell data → initialized CellResource
 func _init(
 	p_cell_id: int,
-	p_x: int,
-	p_y: int,
 	p_walkable: bool,
 	p_active: bool = false,
 	p_line_of_sight: bool = false,
@@ -113,8 +108,6 @@ func _init(
 	p_raw_data: String = ""
 ) -> void:
 	cell_id = p_cell_id
-	grid_x = p_x
-	grid_y = p_y
 	walkable = p_walkable
 	active = p_active
 	line_of_sight = p_line_of_sight

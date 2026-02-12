@@ -248,11 +248,11 @@ func build_map(map_resource: MapResource) -> void:
 		
 		active_cells += 1
   
-		var cell_x: float = col * cell_width + x_offset
-		var cell_y: float = row * cell_half_height \
+		var cell_world_x: float = col * cell_width + x_offset
+		var cell_world_y: float = row * cell_half_height \
 			- level_height * (cell_resource.ground_level - 7)
   
-		var cell_position: Vector2 = Vector2(cell_x, cell_y)
+		var cell_position: Vector2 = Vector2(cell_world_x, cell_world_y)
   
 		# Ground layer
 		if cell_resource.layer_ground_num != 0:

@@ -44,14 +44,9 @@ func load_map(map_id: int) -> void:
 			push_error("[MapManager] Failed to parse cell %d" % i)
 			return
 		
-		# Calculate cell coordinates
-		var coords: Vector2i = get_cell_grid_coordinates(i, map_data.width)
-		
 		# Create CellResource from parsed data
 		var cell_resource: CellResource = CellResource.new(
 			i,  # cell_id
-			coords.x,  # x
-			coords.y,  # y
 			cell_dict.walkable,  # walkable
 			cell_dict.active,
 			cell_dict.line_of_sight,
@@ -94,53 +89,3 @@ func load_map(map_id: int) -> void:
 
 	# Step 5: Call map building
 	Battlefield.build_map(map_resource)
-
-
-
-
-
-# =========================
-# COORDINATE UTILITIES
-# =========================
-## Convert cell number to (x, y) grid coordinates
-func get_cell_grid_coordinates(cell_id: int, map_width: int) -> Vector2i:
-	# Simple row-major layout: cells per row = map_width
-	var row: int = floori(float(cell_id) / map_width)
-	var col: int = cell_id % map_width
-	return Vector2i(col, row)
-
-## Convert (x, y) coordinates to cell number
-func get_cell_number(x: int, y: int, map_width: int) -> int:
-	return x * map_width + y * (map_width - 1)
-
-## Calculate pixel position for a cell
-func get_pixel_position(cell_num: int, map_width: int, ground_level: int) -> Vector2:
-	var cell_width: int = Battlefield.CELL_WIDTH
-	var half_width: float = Battlefield.CELL_HALF_WIDTH
-	var half_height: float = Battlefield.CELL_HALF_HEIGHT
-	
-	var row: int = 0
-	var col: int = -1
-	var max_col: int = map_width - 1
-	var x_offset: float = 0.0
-	
-	# Reproduce Flash iteration logic to reach cell_num
-	for i in range(cell_num):
-		if col == max_col:
-			col = 0
-			row += 1
-			
-			if x_offset == 0.0:
-				x_offset = half_width
-				max_col -= 1
-			else:
-				x_offset = 0.0
-				max_col += 1
-		else:
-			col += 1
-	
-	# Compute final pixel position
-	var x: float = col * cell_width + x_offset
-	var y: float = row * half_height - Battlefield.LEVEL_HEIGHT * (ground_level - 7)
-	
-	return Vector2(x, y)
