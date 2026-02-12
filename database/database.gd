@@ -73,7 +73,7 @@ func _load_all_maps() -> void:
 ## Flow: map_id → raw map data dictionary
 func get_map_data(map_id: int) -> Dictionary:
 	if not _map_cache.has(map_id):
-		push_error("[Database] Map %d not found in cache" % map_id)
+		push_error("[Database] MapHandler %d not found in cache" % map_id)
 		print("[Database] Available map IDs: %s" % _map_cache.keys())
 		return {}
 	

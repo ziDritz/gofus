@@ -4,16 +4,10 @@
 extends Node
 
 
-
-# =========================
-# INITIALIZATION
-# =========================
 func _ready() -> void:
 	print("[MapManager] Ready")
 
-# =========================
-# MAP LOADING
-# =========================
+
 ## Orchestrate map loading process
 ## Flow: map_id → raw map dict → uncompressed cells → CellResource list → MapResource → Datacenter
 func load_map(map_id: int) -> void:
@@ -51,7 +45,7 @@ func load_map(map_id: int) -> void:
 			return
 		
 		# Calculate cell coordinates
-		var coords: Vector2i = get_cell_coordinates(i, map_data.width)
+		var coords: Vector2i = get_cell_grid_coordinates(i, map_data.width)
 		
 		# Create CellResource from parsed data
 		var cell_resource: CellResource = CellResource.new(
@@ -93,12 +87,14 @@ func load_map(map_id: int) -> void:
 		map_data.bgID
 	)
 	
+	print("[MapManager] MapHandler resource initialized: width=%d, height=%d, bgID=%d, cell count=%d" % [map_data.width, map_data.height, map_data.bgID, actual_cell_count])
+
 	# Step 4: Send MapResource to Datacenter
 	Datacenter.set_current_map(map_resource)
 
 	# Step 5: Call map building
 	Battlefield.build_map(map_resource)
-	print("[MapManager] Map resource loaded: width=%d, height=%d, bgID=%d, cell count=%d" % [map_data.width, map_data.height, map_data.bgID, actual_cell_count])
+
 
 
 
@@ -106,11 +102,11 @@ func load_map(map_id: int) -> void:
 # =========================
 # COORDINATE UTILITIES
 # =========================
-## Convert cell number to (x, y) coordinates
-func get_cell_coordinates(cell_num: int, map_width: int) -> Vector2i:
+## Convert cell number to (x, y) grid coordinates
+func get_cell_grid_coordinates(cell_id: int, map_width: int) -> Vector2i:
 	# Simple row-major layout: cells per row = map_width
-	var row: int = floori(float(cell_num) / map_width)
-	var col: int = cell_num % map_width
+	var row: int = floori(float(cell_id) / map_width)
+	var col: int = cell_id % map_width
 	return Vector2i(col, row)
 
 ## Convert (x, y) coordinates to cell number

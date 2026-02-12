@@ -1,4 +1,4 @@
-# MapResource.gd (merges Map.as and DofusMap.as)
+# MapResource.gd (merges MapHandler.as and DofusMap.as)
 # Data structure representing a complete map with all its cells and metadata
 
 extends Resource
@@ -8,13 +8,13 @@ class_name MapResource
 # PROPERTIES
 # =========================
 
-## Map unique identifier
+## MapHandler unique identifier
 var map_id: int
 
-## Map width in cells
+## MapHandler width in cells
 var width: int
 
-## Map height in cells
+## MapHandler height in cells
 var height: int
 
 ## All cells in the map, indexed by cell_id

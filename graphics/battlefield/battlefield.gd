@@ -1,8 +1,9 @@
 # battlefield.gd
 extends Node
 var loader_handler: LoaderHandler
-var current_map: Map
-var map_scene: PackedScene
+var map_handler: MapHandler
+
+const MAP_HANDLER_SCENE: PackedScene = preload("uid://4cltpjumsgaf")
 
 # =========================
 # CONSTANTS
@@ -18,25 +19,18 @@ const O_BOUNDS_JSON_PATH: String = "assets/graphics/gfx/objects/o_bounds_x2.json
 
 ## Initializes dependencies and event listening
 func _ready() -> void:
+
 	loader_handler = LoaderHandler.new()
 	add_child(loader_handler)
-	
-	# Load the Map scene
-	map_scene = load("res://graphics/battlefield/Map.tscn")
-	if map_scene == null:
-		push_error("Failed to load Map scene from res://graphics/battlefield/Map.tscn")
+
+	map_handler = MAP_HANDLER_SCENE.instantiate()
+	add_child(map_handler) # add_child allow to call _ready
+	map_handler.initialize(loader_handler)
 
 
-## Replaces old map with fresh rendering
 func build_map(map_resource: MapResource) -> void:
-	if current_map != null:
-		current_map.queue_free()
-		current_map = null
-
-	current_map = map_scene.instantiate()
-	add_child(current_map) # add_child allow to call _ready
-	current_map.initialize(map_resource, loader_handler)
+	map_handler.build_map(map_resource)
 
 
-func display_cell_ids():
-	current_map.display_cell_ids()
+func display_cell_ids() -> void:
+	map_handler.display_cell_ids()
