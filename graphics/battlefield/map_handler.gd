@@ -86,6 +86,8 @@ func _ready() -> void:
 ## Initialize map with MapResource
 func initialize(_loader_handler: LoaderHandler) -> void:
 	loader_handler = _loader_handler
+
+
 ## Get or create a sprite from the ground pool
 func _get_ground_sprite2D() -> Sprite2D:
 	if _ground_pool_index < _ground_sprite_pool.size():
@@ -98,13 +100,14 @@ func _get_ground_sprite2D() -> Sprite2D:
 		return sprite
 	else:
 		# Pool exhausted, create new sprite
-		print("[PERF] Creating new ground sprite - pool size: ", _ground_sprite_pool.size())
 		var sprite: Sprite2D = Sprite2D.new()
 		sprite.centered = false
 		ground_layer.add_child(sprite)
 		_ground_sprite_pool.append(sprite)
 		_ground_pool_index += 1
 		return sprite
+
+
 ## Get or create a sprite from the object1 pool
 func _get_object1_sprite2D() -> Sprite2D:
 	if _object1_pool_index < _object1_sprite_pool.size():
@@ -116,13 +119,14 @@ func _get_object1_sprite2D() -> Sprite2D:
 		sprite.visible = true
 		return sprite
 	else:
-		print("[PERF] Creating new object1 sprite - pool size: ", _object1_sprite_pool.size())
 		var sprite: Sprite2D = Sprite2D.new()
 		sprite.centered = false
 		object1_layer.add_child(sprite)
 		_object1_sprite_pool.append(sprite)
 		_object1_pool_index += 1
 		return sprite
+
+
 ## Get or create a sprite from the object2 pool
 func _get_object2_sprite2D() -> Sprite2D:
 	if _object2_pool_index < _object2_sprite_pool.size():
@@ -134,13 +138,14 @@ func _get_object2_sprite2D() -> Sprite2D:
 		sprite.visible = true
 		return sprite
 	else:
-		print("[PERF] Creating new object2 sprite - pool size: ", _object2_sprite_pool.size())
 		var sprite: Sprite2D = Sprite2D.new()
 		sprite.centered = false
 		object2_layer.add_child(sprite)
 		_object2_sprite_pool.append(sprite)
 		_object2_pool_index += 1
 		return sprite
+
+
 ## Get or create a label from the label pool
 func _get_cell_id_label() -> Label:
 	if _label_pool_index < _label_pool.size():
@@ -149,7 +154,6 @@ func _get_cell_id_label() -> Label:
 		label.visible = true
 		return label
 	else:
-		print("[PERF] Creating new label - pool size: ", _label_pool.size())
 		var label: Label = Label.new()
 		label.add_theme_font_size_override("font_size", 12)
 		label.add_theme_color_override("font_color", Color.WHITE)
@@ -159,9 +163,10 @@ func _get_cell_id_label() -> Label:
 		_label_pool.append(label)
 		_label_pool_index += 1
 		return label
+
+
 ## Reset all pools for reuse (called before build_map)
 func _reset_pools() -> void:
-	var start_time := Time.get_ticks_usec()
 	
 	# Hide all pooled sprites beyond the current usage
 	for i in range(_ground_sprite_pool.size()):
@@ -181,19 +186,10 @@ func _reset_pools() -> void:
 	_object1_pool_index = 0
 	_object2_pool_index = 0
 	_label_pool_index = 0
-	
-	var elapsed := Time.get_ticks_usec() - start_time
-	print("[PERF] Pool reset took: ", elapsed, " µs (", elapsed / 1000.0, " ms)")
-	print("[PERF] Pool sizes - Ground: ", _ground_sprite_pool.size(), 
-		  " | Obj1: ", _object1_sprite_pool.size(), 
-		  " | Obj2: ", _object2_sprite_pool.size(), 
-		  " | Labels: ", _label_pool.size())
+
+
 ## Build full visual representation of the map
 func build_map(map_resource: MapResource) -> void:
-	var build_start_time := Time.get_ticks_usec()
-	print("[PERF] ===== Starting map build =====")
-	print("[PERF] Map size: ", map_resource.width, "x", map_resource.cells.size() / map_resource.width, " (", map_resource.cells.size(), " cells)")
-	
 	# Reset pools before building
 	_reset_pools()
 	
@@ -223,14 +219,10 @@ func build_map(map_resource: MapResource) -> void:
 	var total_label_time: int = 0
   
 	# Background
-	var bg_start := Time.get_ticks_usec()
 	if background != null and map_resource.background_id != 0:
 		background.texture = loader_handler.get_background_texture(map_resource.background_id)
-	var bg_elapsed := Time.get_ticks_usec() - bg_start
-	print("[PERF] Background setup: ", bg_elapsed, " µs")
   
 	# Cell loop
-	var loop_start := Time.get_ticks_usec()
 	var cell_id: int = -1
 	while cell_id + 1 < cell_count:
 		cell_id += 1
@@ -267,23 +259,12 @@ func build_map(map_resource: MapResource) -> void:
 			ground_tiles += 1
 			var ground_sprite: Sprite2D = _get_ground_sprite2D()
 			
-			var json_start := Time.get_ticks_usec()
 			ground_sprite.hframes = ground_metadata[cell_resource.layer_ground_num]["frame_count"]
-			var json_elapsed := Time.get_ticks_usec() - json_start
-			total_json_time += json_elapsed
-			
-			var texture_start := Time.get_ticks_usec()
 			ground_sprite.texture = loader_handler.get_ground_tile_texture(cell_resource.layer_ground_num)
-			var texture_elapsed := Time.get_ticks_usec() - texture_start
-			total_texture_time += texture_elapsed
-			
-			var bounds_start := Time.get_ticks_usec()
 			var bounds: Vector2 = Vector2(
 				ground_metadata[cell_resource.layer_ground_num]["horizontal"],
 				ground_metadata[cell_resource.layer_ground_num]["vertical"]
 			)
-			var bounds_elapsed := Time.get_ticks_usec() - bounds_start
-			total_bounds_time += bounds_elapsed
 			
 			ground_sprite.offset = bounds
 			ground_sprite.position = cell_position
@@ -298,31 +279,19 @@ func build_map(map_resource: MapResource) -> void:
 			if cell_resource.layer_ground_flip:
 				ground_sprite.scale.x *= -1.0
 			
-			if ground_tiles == 1:  # Only print first tile details
-				print("[PERF-DETAIL] First ground tile - JSON frame: ", json_elapsed, "µs | Texture: ", texture_elapsed, "µs | JSON bounds: ", bounds_elapsed, "µs")
-  
 		# Object layer 1
 		if cell_resource.layer_object1_num != 0:
 			object1_tiles += 1
-			var obj1_sprite_start := Time.get_ticks_usec()
 			var object1_sprite: Sprite2D = _get_object1_sprite2D()
-			var obj1_sprite_elapsed := Time.get_ticks_usec() - obj1_sprite_start
 			
 			# Reset sprite properties
 			object1_sprite.hframes = 1  # Reset frame count
-			
-			var obj1_texture_start := Time.get_ticks_usec()
 			object1_sprite.texture = loader_handler.get_object_sprite_texture(cell_resource.layer_object1_num)
-			var obj1_texture_elapsed := Time.get_ticks_usec() - obj1_texture_start
-			total_texture_time += obj1_texture_elapsed
 			
-			var obj1_bounds_start := Time.get_ticks_usec()
 			var bounds: Vector2 = Vector2(
 				object_bounds[cell_resource.layer_object1_num]["horizontal"],
 				object_bounds[cell_resource.layer_object1_num]["vertical"]
 			)
-			var obj1_bounds_elapsed := Time.get_ticks_usec() - obj1_bounds_start
-			total_bounds_time += obj1_bounds_elapsed
 			
 			object1_sprite.offset = bounds
 			object1_sprite.position = cell_position
@@ -335,31 +304,19 @@ func build_map(map_resource: MapResource) -> void:
 			if cell_resource.layer_object1_flip:
 				object1_sprite.scale.x *= -1.0
 			
-			if object1_tiles == 1:  # Only print first tile details
-				print("[PERF-DETAIL] First obj1 tile - Get sprite: ", obj1_sprite_elapsed, "µs | Texture: ", obj1_texture_elapsed, "µs | JSON bounds: ", obj1_bounds_elapsed, "µs")
-  
 		# Object layer 2 (top)
 		if cell_resource.layer_object2_num != 0:
 			object2_tiles += 1
-			var obj2_sprite_start := Time.get_ticks_usec()
 			var object2_sprite: Sprite2D = _get_object2_sprite2D()
-			var obj2_sprite_elapsed := Time.get_ticks_usec() - obj2_sprite_start
 			
 			# Reset sprite properties
 			object2_sprite.hframes = 1  # Reset frame count
-			
-			var obj2_texture_start := Time.get_ticks_usec()
 			object2_sprite.texture = loader_handler.get_object_sprite_texture(cell_resource.layer_object2_num)
-			var obj2_texture_elapsed := Time.get_ticks_usec() - obj2_texture_start
-			total_texture_time += obj2_texture_elapsed
-			
-			var obj2_bounds_start := Time.get_ticks_usec()
+
 			var bounds: Vector2 = Vector2(
 				object_bounds[cell_resource.layer_object2_num]["horizontal"],
 				object_bounds[cell_resource.layer_object2_num]["vertical"]
 			)
-			var obj2_bounds_elapsed := Time.get_ticks_usec() - obj2_bounds_start
-			total_bounds_time += obj2_bounds_elapsed
 			
 			object2_sprite.offset = bounds
 			object2_sprite.position = cell_position
@@ -367,51 +324,13 @@ func build_map(map_resource: MapResource) -> void:
 			if cell_resource.layer_object2_flip:
 				object2_sprite.scale.x = -1.0
 			
-			if object2_tiles == 1:  # Only print first tile details
-				print("[PERF-DETAIL] First obj2 tile - Get sprite: ", obj2_sprite_elapsed, "µs | Texture: ", obj2_texture_elapsed, "µs | JSON bounds: ", obj2_bounds_elapsed, "µs")
-  
 		# Cell ID label
-		var label_start := Time.get_ticks_usec()
 		var cell_id_label: Label = _get_cell_id_label()
-		var label_get_elapsed := Time.get_ticks_usec() - label_start
-		
-		var label_setup_start := Time.get_ticks_usec()
 		cell_id_label.text = str(cell_id)
 		cell_id_label.position = cell_position
 		cell_id_label.position.x -= 10  # Approximate centering offset
 		cell_id_label.position.y -= 6
-		var label_setup_elapsed := Time.get_ticks_usec() - label_setup_start
-		total_label_time += label_get_elapsed + label_setup_elapsed
 		
-		if active_cells == 1:  # Only print first label details
-			print("[PERF-DETAIL] First label - Get label: ", label_get_elapsed, "µs | Setup: ", label_setup_elapsed, "µs")
-	
-	var loop_elapsed := Time.get_ticks_usec() - loop_start
-	var build_total := Time.get_ticks_usec() - build_start_time
-	
-	print("[PERF] Cell loop took: ", loop_elapsed, " µs (", loop_elapsed / 1000.0, " ms)")
-	print("[PERF] Active cells: ", active_cells, " | Ground: ", ground_tiles, " | Obj1: ", object1_tiles, " | Obj2: ", object2_tiles, " | Labels: ", active_cells)
-	print("[PERF] Pool reuse - Ground: ", _ground_pool_index - ground_tiles, 
-		  " | Obj1: ", _object1_pool_index - object1_tiles, 
-		  " | Obj2: ", _object2_pool_index - object2_tiles)
-	
-	# Detailed timing breakdown
-	print("[PERF] ===== TIMING BREAKDOWN =====")
-	print("[PERF] Total JSON lookups:    ", total_json_time, " µs (", total_json_time / 1000.0, " ms) - ", (total_json_time * 100.0 / loop_elapsed), "%")
-	print("[PERF] Total texture loading: ", total_texture_time, " µs (", total_texture_time / 1000.0, " ms) - ", (total_texture_time * 100.0 / loop_elapsed), "%")
-	print("[PERF] Total bounds lookups:  ", total_bounds_time, " µs (", total_bounds_time / 1000.0, " ms) - ", (total_bounds_time * 100.0 / loop_elapsed), "%")
-	print("[PERF] Total label creation:  ", total_label_time, " µs (", total_label_time / 1000.0, " ms) - ", (total_label_time * 100.0 / loop_elapsed), "%")
-	var accounted_time := total_json_time + total_texture_time + total_bounds_time + total_label_time
-	var other_time := loop_elapsed - accounted_time
-	print("[PERF] Other operations:      ", other_time, " µs (", other_time / 1000.0, " ms) - ", (other_time * 100.0 / loop_elapsed), "%")
-	print("[PERF] ===========================")
-	
-	print("[PERF] TOTAL build_map time: ", build_total, " µs (", build_total / 1000.0, " ms)")
-	print("[PERF] ===== Map build complete =====")
-
-# =========================
-# DISPLAY METHODS
-# =========================
 
 ## Toggle visibility of cell ID labels
 func display_cell_ids() -> void:
