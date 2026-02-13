@@ -36,7 +36,7 @@ gdscript/warnings/unused_signal=0
 
 window/size/viewport_width=1484
 window/size/viewport_height=1112
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
