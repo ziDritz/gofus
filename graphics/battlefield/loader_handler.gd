@@ -7,9 +7,9 @@ extends Node
 # =========================
 # CONSTANTS
 # =========================
-const GROUND_TILES_PATH: String = "res://assets/graphics/gfx/grounds/"
-const OBJECT_SPRITES_PATH: String = "res://assets/graphics/gfx/objects/"
-const BACKGROUNDS_PATH: String = "res://assets/graphics/gfx/backgrounds/"
+const GROUND_TILES_PATH: String = "res://assets/graphics/gfx/grounds_scale_x2/"
+const OBJECT_SPRITES_PATH: String = "res://assets/graphics/gfx/objects_scale_x2/"
+const BACKGROUNDS_PATH: String = "res://assets/graphics/gfx/backgrounds_scale_x2/"
 
 # =========================
 # ASSET CACHE

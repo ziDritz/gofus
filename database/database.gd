@@ -29,7 +29,6 @@ func _load_all_maps() -> void:
 	
 	# Read header
 	var header: PackedStringArray = file.get_csv_line()
-	print("[Database] CSV header: %s" % str(header))
 	
 	# Parse rows
 	var count: int = 0

@@ -337,5 +337,3 @@ func display_cell_ids() -> void:
 	if cell_ids_layer:
 		cell_ids_layer.visible = not cell_ids_layer.visible
 	
-
-
